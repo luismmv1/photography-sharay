@@ -25,7 +25,7 @@ const page = () => {
       setCurrentImageIndex((prevIndex) =>
         prevIndex === images.length - 1 ? 0 : prevIndex + 1
       );
-    }, 5000); // Cambia cada 5 segundos
+    }, 8000); // Cambia cada 5 segundos
     return () => clearInterval(interval);
   }, []);
   return (
