@@ -62,8 +62,8 @@ const Footer = () => {
         <div>
           <h3 className="text-lg font-semibold mb-4">Contáctame</h3>
           <ul className="space-y-2 text-gray-400">
-            <li>📞 Teléfono: +58 123-456-7890</li>
-            <li>📧 Email: contacto@ejemplo.com</li>
+            <li>📞 Teléfono: +56 9 8557 9335</li>
+            <li>📧 Email: sharayhv@icloud.com</li>
           </ul>
         </div>
 
@@ -72,7 +72,7 @@ const Footer = () => {
           <h3 className="text-lg font-semibold mb-4">Sígueme</h3>
           <div className="flex space-x-4">
             <motion.a
-              href="https://www.instagram.com"
+              href="https://www.instagram.com/sharavision.cl/"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.2 }}
@@ -81,7 +81,7 @@ const Footer = () => {
               <FaInstagram className="text-2xl hover:text-indigo-500 transition" />
             </motion.a>
             <motion.a
-              href="https://www.tiktok.com"
+              href="https://www.tiktok.com/@sharayhenriquezvi"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.2 }}
@@ -99,7 +99,7 @@ const Footer = () => {
               <FaPinterest className="text-2xl hover:text-indigo-500 transition" />
             </motion.a>
             <motion.a
-              href="https://wa.me/581234567890"
+              href="https://wa.me/56985579335"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.2 }}
@@ -120,7 +120,7 @@ const Footer = () => {
         transition={{ duration: 1 }}
       >
         <hr className="border-gray-700 mb-6" />
-        © {new Date().getFullYear()} Name Photography. Todos los derechos reservados.
+        © {new Date().getFullYear()} Name Photography By Luis Mogollon. Todos los derechos reservados.
       </motion.div>
     </footer>
   );
