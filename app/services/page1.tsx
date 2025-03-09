@@ -1,9 +1,8 @@
-'use client';
+'use client'
 
-import { motion } from 'framer-motion';
-import Link from 'next/link';
-import { AnimatedPin } from './components/AnimatePin'; // Importación del componente AnimatedPin
-import servicesData from './components/servicesData'; // Importación de los datos
+import { motion } from "framer-motion";
+import Link from "next/link";
+import servicesData from "./components/servicesData"; // Importación de los datos
 
 const ServicesPage = () => {
   return (
@@ -49,12 +48,12 @@ const ServicesPage = () => {
               viewport={{ once: true }}
               transition={{ duration: 1 + index * 0.2 }}
             >
-              {/* Componente de Imagen Nueva */}
+              {/* Imagen */}
               <div className="lg:w-1/2">
-                <AnimatedPin
-                  title={servicio.titulo}
-                  href={servicio.enlace}
-                  imageUrl={servicio.imagen}
+                <img
+                  src={servicio.imagen}
+                  alt={servicio.titulo}
+                  className="rounded-lg shadow-lg w-[500px] h-[500px]"
                 />
               </div>
 

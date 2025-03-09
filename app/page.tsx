@@ -71,7 +71,6 @@ const page = () => {
               Explora mi portafolio y descubre mi pasión por la fotografía.
             </span>
           </h2>
-        
           <Link
             href="#contact"
             className="mt-6 inline-block px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-500 transition"

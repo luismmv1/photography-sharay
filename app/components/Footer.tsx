@@ -27,7 +27,7 @@ const Footer = () => {
             whileHover={{ scale: 1.1 }}
             transition={{ type: "spring", stiffness: 100 }}
           >
-            Shara`s Photography
+            Shara's Photography
           </motion.h2>
           <p className="text-gray-400 text-sm">
             Capturando momentos inolvidables y transformándolos en arte. Más de 10 años de experiencia en fotografía y contenido digital.
