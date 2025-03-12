@@ -1,6 +1,5 @@
 'use client';
 
-import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import { AnimatedServiceDemo } from '../getData/AnimatedServiceDemo';
 import servicesDataSlug from '../getData/servicesDataSlug';
@@ -13,36 +12,19 @@ interface ServiceData {
   images: string[];
 }
 
-interface Params {
-  slug: string;
-}
-
-interface PageProps {
-  params: Promise<Params>;  // Ajuste aquí para manejar params como una promesa
-}
-
-export default function ServicePage({ params }: PageProps) {
-  const [resolvedParams, setResolvedParams] = useState<Params | null>(null);
+export default function ServicePage({ params }: { params: { slug: string } }) {
   const [service, setService] = useState<ServiceData | null>(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    async function resolveParams() {
-      const paramsResult = await params;
-      setResolvedParams(paramsResult);
-    }
-
-    resolveParams();
-  }, [params]);
-
-  useEffect(() => {
-    if (resolvedParams) {
-      const { slug } = resolvedParams;
+    async function fetchParams() {
+      const { slug } = await params;
       const foundService = servicesDataSlug.find(service => service.slug === slug);
       setService(foundService || null);
       setLoading(false);
     }
-  }, [resolvedParams]);
+    fetchParams();
+  }, [params]);
 
   if (loading || !service) {
     return <div>Loading...</div>;
@@ -50,17 +32,7 @@ export default function ServicePage({ params }: PageProps) {
 
   return (
     <div>
-      <section className="container mx-auto bg-white dark:bg-gray-900">
-        <div className="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-6">
-          <a
-            href="/services"
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-white border bg-black border-gray-300 rounded-lg hover:bg-gray-700 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800"
-          >
-            Volver a Servicios
-          </a>
-        </div>
-      </section>
+      
       <section className="bg-white dark:bg-gray-900">
         <div className="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
           <div className="mr-auto place-self-center lg:col-span-7">
@@ -71,10 +43,10 @@ export default function ServicePage({ params }: PageProps) {
               {service.descripcion}
             </p>
             <a
-              href="#"
-              className="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900"
+              href="/services"
+              className="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-black hover:bg-gray-700 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900"
             >
-              Get started
+              Volver a Servicios
               <svg
                 className="w-5 h-5 ml-2 -mr-1"
                 fill="currentColor"
@@ -101,13 +73,10 @@ export default function ServicePage({ params }: PageProps) {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
               {service.images.map((src, index) => (
                 <div key={index} className="relative">
-                  <Image
+                  <img
                     src={src}
                     alt={`${service.titulo} ${index + 1}`}
                     className="w-full h-auto object-cover rounded-lg"
-                    width={500}
-                    height={500}
-                    priority={index === 0}
                   />
                 </div>
               ))}
@@ -115,6 +84,7 @@ export default function ServicePage({ params }: PageProps) {
           </div>
         </div>
       </section>
+      {/* Integración del componente AnimatedServiceDemo */}
       <section className="mt-8 bg-white dark:bg-gray-900">
         <div className="container mx-auto">
           <AnimatedServiceDemo />
