@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-const contact = () => {
+const ContactUs = () => {
   return (
     <div>
       {/* Contact Section */}
@@ -178,4 +178,4 @@ const contact = () => {
   )
 }
 
-export default contact
+export default ContactUs

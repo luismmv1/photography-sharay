@@ -3,6 +3,7 @@ const servicesDataSlug = [
     slug: 'digital',
     titulo: 'Creación de Contenido Digital',
     descripcion: 'Diseñamos contenido multimedia para redes sociales, campañas publicitarias, y más.',
+    descripcion2: 'La Creación de Contenido Digital es nuestra especialidad: conceptualizamos y producimos material visual estratégico que refuerza tu presencia en redes sociales, websites y campañas. Desde fotografía hasta videos creativos, nuestro enfoque está orientado hacia resultados auténticos y emocionantes.',
     imagen: '/pages/services/digital/digital.jpg',
     images: [
       '/pages/services/digital/digital.jpg',
@@ -12,6 +13,7 @@ const servicesDataSlug = [
     slug: 'quinces',
     titulo: 'Fotografía de 15 Años',
     descripcion: 'Celebra la magia de los 15 años con fotografías que reflejan alegría, belleza y un estilo personalizado.',
+    descripcion2: 'En un día tan único como tus 15 años, ofrecemos sesiones fotográficas diseñadas para destacar tu esencia y estilo. Nos aseguramos de que cada imagen sea una obra de arte que contarás con orgullo por generaciones. Escenarios creativos, detalles precisos y un toque profesional nos distinguen.',
     imagen: '/pages/services/quinces/quinces.jpg',
     images: [
       '/pages/services/quinces/quinces.jpg',
@@ -26,6 +28,7 @@ const servicesDataSlug = [
     slug: 'aniversarios',
     titulo: 'Fotografía de Aniversarios',
     descripcion: 'Celebramos tus aniversarios con imágenes que capturan la esencia de tus momentos más especiales.',
+    descripcion2: 'Los aniversarios merecen ser celebrados con imágenes que cuenten su historia. Ofrecemos sesiones íntimas y artísticas que reflejan la conexión única entre ustedes. Desde locaciones románticas hasta detalles personalizados, cada foto será un testimonio vibrante de su amor.',
     imagen: '/pages/services/aniversarios/aniversarios.jpg',
     images: [
       '/pages/services/aniversarios/aniversarios.jpg',
@@ -41,6 +44,7 @@ const servicesDataSlug = [
     slug: 'babyshowers',
     titulo: 'Fotografía de Baby Showers',
     descripcion: 'Creemos recuerdos inolvidables de la llegada de tu bebé con fotos llenas de ternura y alegría.',
+    descripcion2: 'La fotografía de Baby Showers es ideal para guardar los recuerdos de un momento tan especial: tu dulce espera. Nuestro equipo captura la alegría y los detalles únicos de este evento familiar, asegurándonos de reflejar la emoción en cada toma.',
     imagen: '/pages/services/babyshowers/babyshowers.jpg',
     images: [
       '/pages/services/babyshowers/babyshowers.jpg',
@@ -52,6 +56,7 @@ const servicesDataSlug = [
     slug: 'bautizos',
     titulo: 'Fotografía de Bautizos',
     descripcion: 'Inmortalizamos este evento especial con fotos que reflejan la espiritualidad y amor familiar.',
+    descripcion2: 'El bautizo es una ceremonia cargada de emoción y espiritualidad. Nuestro equipo captura los momentos clave del evento, incluyendo detalles únicos, expresiones de amor y la esencia del día, asegurando que el recuerdo sea tan especial como la ocasión.',
     imagen: '/pages/services/bautizos/bautizos.jpg',
     images: [
       '/pages/services/bautizos/bautizos.jpg',
@@ -62,6 +67,7 @@ const servicesDataSlug = [
     slug: 'bodas',
     titulo: 'Fotografía de Bodas',
     descripcion: 'Capturamos los momentos más especiales de tu gran día con un estilo artístico y único, creando recuerdos inolvidables.',
+    descripcion2: 'En el día más importante de tu vida, nuestras fotografías relatarán la historia completa: los nervios, el amor, la risa y las lágrimas. Ofrecemos un servicio integral que combina talento artístico y técnica, creando imágenes que preservan la magia de tu boda para siempre.',
     imagen: '/pages/services/bodas/boda.jpg',
     images: [
       '/pages/services/bodas/boda.jpg',
@@ -124,6 +130,7 @@ const servicesDataSlug = [
     slug: 'cumples',
     titulo: 'Fotografía de Cumpleaños',
     descripcion: 'Haz que tus celebraciones de cumpleaños sean inolvidables con fotografías llenas de vida y color.',
+    descripcion2: 'No hay cumpleaños sin recuerdos. Nuestro servicio de fotografía asegura que cada instante, desde los detalles decorativos hasta los momentos espontáneos, quede plasmado en imágenes llenas de vida y color. Creamos retratos y tomas grupales que serán el corazón de tus memorias.',
     imagen: '/pages/services/cumples/cumples.jpg',
     images: [
       '/pages/services/cumples/cumples.jpg',
@@ -133,6 +140,7 @@ const servicesDataSlug = [
     slug: 'eventos',
     titulo: 'Fotografía de Eventos Especiales',
     descripcion: 'Desde aniversarios hasta eventos corporativos, capturamos cada detalle con creatividad y profesionalismo.',
+    descripcion2: 'Cada evento especial tiene su propio brillo. Nuestro servicio profesional garantiza capturar la esencia de tus reuniones, celebraciones y momentos destacados, con fotografías que van más allá del simple registro, contando una historia visual única.',
     imagen: '/pages/services/eventos/eventos.jpg',
     images: [
       '/pages/services/eventos//eventos.jpg',
@@ -154,6 +162,7 @@ const servicesDataSlug = [
     slug: 'producto',
     titulo: 'Fotografía de Producto',
     descripcion: 'Resalta las características únicas de tus productos con imágenes de alta calidad que captan la atención de tus clientes.',
+    descripcion2: 'La Fotografía de Producto es esencial para cautivar a tu audiencia. Diseñamos sesiones personalizadas que presentan cada detalle de tu producto con una estética que refuerza la identidad de tu marca. Ideal para catálogos, redes sociales y e-commerce.',
     imagen: '/pages/services/producto/producto.jpg',
     images: [
       '/pages/services/producto/producto.jpg',
@@ -163,6 +172,7 @@ const servicesDataSlug = [
     slug: 'retratos',
     titulo: 'Fotografía de Retratos',
     descripcion: 'Retratos profesionales y artísticos que destacan tu esencia y personalidad en cada imagen.',
+    descripcion2: 'Los retratos son una forma de arte que reflejan quién eres. Creamos sesiones íntimas y cuidadosamente planificadas, donde cada ángulo, luz y expresión cuentan una historia auténtica. Retratos profesionales ideales para portafolios, recuerdos o regalos.',
     imagen: '/pages/services/retratos/retratos.jpg',
     images: [
       '/pages/services/retratos/retratos.jpg',
@@ -173,6 +183,7 @@ const servicesDataSlug = [
     slug: 'model',
     titulo: 'Fotografía para Modelos',
     descripcion: 'Creamos videos de alta calidad para proyectos personales, comerciales o corporativos con un estilo cinematográfico.',
+    descripcion2: 'Nuestro servicio especializado para modelos incluye sesiones diseñadas estratégicamente para destacar tus mejores rasgos. Trabajamos en conjunto para lograr imágenes que conquisten agencias y audiencias, abriendo puertas a nuevas oportunidades.',
     imagen: '/pages/services/model/model.jpg',
     images: [
       '/pages/services/model/model.jpg',
@@ -190,6 +201,7 @@ const servicesDataSlug = [
     slug: 'audiovisual',
     titulo: 'Producción Audiovisual',
     descripcion: 'Creamos videos de alta calidad para proyectos personales, comerciales o corporativos con un estilo cinematográfico.',
+    descripcion2: 'La Producción Audiovisual es el arte de contar historias a través de imágenes en movimiento. Desde videos corporativos hasta documentales y anuncios, nuestro equipo transforma ideas en producciones de alta calidad. Cada proyecto combina creatividad y técnica para alcanzar un impacto memorable.',
     imagen: '/pages/services/audiovisual/audiovisual.jpg',
     images: [
       '/pages/services/audiovisual/audiovisual.jpg',

@@ -1,8 +1,11 @@
 // menuData.js
 import {
-  ArrowPathIcon, ChartPieIcon, CursorArrowRaysIcon, FingerPrintIcon,
+  CalendarDaysIcon,
+  GiftIcon,
+  HeartIcon,
   PhoneIcon, PlayCircleIcon,
-  SquaresPlusIcon
+  SparklesIcon,
+  SquaresPlusIcon,
 } from '@heroicons/react/20/solid';
   
   export const callsToAction = [
@@ -10,15 +13,20 @@ import {
     { name: 'Contáctame', href: '/contact', icon: PhoneIcon },
   ];
   
-  export const services = [
-    { name: 'Bodas', description: 'Get a better understanding of your traffic', href: '/services/bodas', icon: ChartPieIcon },
-    { name: '15 Años', description: 'Speak directly to your customers', href: '/services/quinces', icon: CursorArrowRaysIcon },
-    { name: 'Aniversarios', description: 'Your customers’ data will be safe and secure', href: '/services/aniversarios', icon: FingerPrintIcon },
-    { name: 'Eventos Especiales', description: 'Connect with third-party tools', href: '/services/eventos', icon: SquaresPlusIcon },
-     /*  { name: 'BabyShowers', description: 'Build strategic funnels that will convert', href: '/services/babyshowers', icon: ArrowPathIcon }, */
-    /* { name: 'Bautizos', description: 'Build strategic funnels that will convert', href: '/services/bautizos', icon: ArrowPathIcon }, */
-    /* { name: 'Cumpleaños', description: 'Build strategic funnels that will convert', href: '/services/cumples', icon: ArrowPathIcon }, */
-    { name: 'Y Mucho más...', description: 'Build strategic funnels that will convert', href: '/services', icon: ArrowPathIcon },
+export const services = [
+    /* { name: 'Creacion de Contenido', description: 'Contenido que conecta y transforma tu presencia online.', href: '/services/digital', icon: ViewfinderCircleIcon }, */
+    { name: 'Bodas', description: 'El día más importante, contado en imágenes perfectas.', href: '/services/bodas', icon: HeartIcon },
+    { name: '15 Años', description: 'Captura la magia de tu transición más especial.', href: '/services/quinces', icon: GiftIcon },
+    { name: 'Aniversarios', description: 'Celebra el amor, captura recuerdos eternos.', href: '/services/aniversarios', icon: CalendarDaysIcon },
+    { name: 'Eventos Especiales', description: 'Tus eventos únicos, capturados con precisión.', href: '/services/eventos', icon: SparklesIcon },
+    /*  { name: 'BabyShowers', description: 'Tu dulce espera, retratada con amor.', href: '/services/babyshowers', icon: GiftTopIcon }, */
+    /* { name: 'Bautizos', description: 'Inmortaliza el comienzo de una fe llena de amor.', href: '/services/bautizos', icon: BuildingLibraryIcon }, */
+    /* { name: 'Cumpleaños', description: 'Memorias vibrantes de tu celebración especial.', href: '/services/cumples', icon: CakeIcon }, */
+    /* { name: 'Productos', description: 'Resalta lo mejor de tu producto.', href: '/services/productos', icon: ArrowPathIcon }, */
+    /* { name: 'Retratos', description: 'Expresa tu esencia en cada fotografía.', href: '/services/retratos', icon: UserCircleIcon }, */
+    /* { name: 'Modelos', description: 'Construye tu portafolio con impacto.', href: '/services/model', icon: UserIcon }, */
+    /* { name: 'Producción Audiovisual', description: 'Narrativas visuales que conectan.', href: '/services/audiovisual', icon: VideoCameraIcon }, */
+    { name: 'Y Mucho más...', description: 'No dudes en ver todos mis servicios...', href: '/services', icon: SquaresPlusIcon },
   ];
   
 

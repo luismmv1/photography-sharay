@@ -3,7 +3,6 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { AnimatedPin } from './components/AnimatePin';
-import { AnimatedServiceDemo } from './getData/AnimatedServiceDemo';
 import servicesDataSlug from './getData/servicesDataSlug';
 
 const page = () => {
@@ -19,6 +18,7 @@ const page = () => {
         }}
       >
         <div className="absolute inset-0 bg-opacity-50 flex flex-col justify-center items-center text-center text-white px-6">
+          {/* Titulo */}
           <motion.h1
             className="text-4xl md:text-6xl font-bold mb-4 bg-gray-700/70 rounded-md p-4"
             initial={{ opacity: 0, y: -50 }}
@@ -27,6 +27,7 @@ const page = () => {
           >
             Servicios
           </motion.h1>
+          {/* Descripcion */}
           <motion.p
             className="max-w-2xl text-gray-300 bg-gray-700/70 rounded-md p-4"
             initial={{ opacity: 0, y: 50 }}
@@ -37,8 +38,7 @@ const page = () => {
           </motion.p>
         </div>
       </section>
-      <AnimatedServiceDemo />
-
+      {/* <AnimatedServiceDemo /> */}
       {/* Servicios */}
       <section id="services" className="py-16">
         <div className="container mx-auto px-6 space-y-16">
@@ -52,7 +52,7 @@ const page = () => {
               transition={{ duration: 1 + index * 0.2 }}
             >
               {/* Componente de Imagen Nueva */}
-              <div className="lg:w-1/2">
+              <div className="lg:w-1/2 mb-12">
                 <AnimatedPin
                   title={servicio.titulo}
                   href={`/services/${servicio.slug}`}
@@ -61,7 +61,7 @@ const page = () => {
               </div>
 
               {/* Contenido */}
-              <div className={`lg:w-1/2 ${index % 2 === 0 ? 'lg:pl-12' : 'lg:pr-12'} mt-8 lg:mt-0`}>
+              <div className={`lg:w-1/2 ${index % 2 === 0 ? 'lg:pl-12' : 'lg:pr-12'} mt-16 lg:mt-10`}>
                 <h2 className="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white">
                   {servicio.titulo}
                 </h2>

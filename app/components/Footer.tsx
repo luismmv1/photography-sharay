@@ -62,7 +62,7 @@ const Footer = () => {
         <div>
           <h3 className="text-lg font-semibold mb-4">Contáctame</h3>
           <ul className="space-y-2 text-gray-400">
-            <li>📞 Teléfono: +56 9 8557 9335</li>
+            <li>📞 Teléfono: +56985579335</li>
             <li>📧 Email: sharayhv@icloud.com</li>
           </ul>
         </div>
