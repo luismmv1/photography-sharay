@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { AnimatedServiceDemo } from '../getData/AnimatedServiceDemo';
+import { AnimatedServiceDemo } from '../components/AnimatedServiceDemo';
 import servicesDataSlug from '../getData/servicesDataSlug';
 
 interface ServiceData {

@@ -32,7 +32,14 @@ export const AnimatedPin: FC<AnimatedPinProps> = ({
             </div>
           )}
           <div className="flex flex-1 w-full rounded-lg">
-            <img src={imageUrl} alt="Imagen del Pin" className="w-full h-full object-cover rounded-lg" /> {/* Imagen del Pin */}
+            <img
+              src={imageUrl}
+              alt="Imagen del Pin"
+              /* className="w-full h-full object-cover rounded-lg" */
+              className='h-full w-full rounded-3xl object-cover object-center'
+              width={500}
+              height={500}
+            /> {/* Imagen del Pin */}
           </div>
         </div>
       </PinContainer>

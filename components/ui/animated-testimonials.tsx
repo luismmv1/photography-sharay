@@ -3,6 +3,7 @@
 import { IconArrowLeft, IconArrowRight } from "@tabler/icons-react";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 type Testimonial = {
@@ -10,11 +11,12 @@ type Testimonial = {
   name: string;
   designation: string;
   src: string;
+  slug: string;
 };
 
 export const AnimatedTestimonials = ({
   testimonials,
-  autoplay = false,
+  autoplay = true,
 }: {
   testimonials: Testimonial[];
   autoplay?: boolean;
@@ -45,10 +47,10 @@ export const AnimatedTestimonials = ({
   };
 
   return (
-    <div className="max-w-sm md:max-w-4xl mx-auto antialiased font-sans px-4 md:px-8 lg:px-12 py-20">
+    <div className="max-w-sm md:max-w-full mx-auto antialiased font-sans px-4 md:px-8 lg:px-12 py-20">
       <div className="relative grid grid-cols-1 md:grid-cols-2 gap-20">
         <div>
-          <div className="relative h-80 w-full">
+          <div className="relative h-100 w-full">
             <AnimatePresence>
               {testimonials.map((testimonial, index) => (
                 <motion.div
@@ -94,7 +96,7 @@ export const AnimatedTestimonials = ({
             </AnimatePresence>
           </div>
         </div>
-        <div className="flex justify-between flex-col py-4">
+        <div className="flex justify-between flex-col p-4">
           <motion.div
             key={active}
             initial={{
@@ -114,13 +116,17 @@ export const AnimatedTestimonials = ({
               ease: "easeInOut",
             }}
           >
-            <h3 className="text-2xl font-bold dark:text-white text-black">
-              {testimonials[active].name}
-            </h3>
+            <Link
+              href={testimonials[active].slug}
+            >
+              <h3 className="text-4xl font-extrabold dark:text-white text-black">
+                {testimonials[active].name}
+              </h3>
+            </Link>
             <p className="text-sm text-gray-500 dark:text-neutral-500">
               {testimonials[active].designation}
             </p>
-            <motion.p className="text-lg text-gray-500 mt-8 dark:text-neutral-300">
+            <motion.p className="text-lg text-gray-500 mt-8 mb-6 dark:text-neutral-300">
               {testimonials[active].quote.split(" ").map((word, index) => (
                 <motion.span
                   key={index}
@@ -145,6 +151,12 @@ export const AnimatedTestimonials = ({
                 </motion.span>
               ))}
             </motion.p>
+            <Link
+              href={testimonials[active].slug}
+              className="rounded bg-gray-600 hover:bg-gray-500 text-white p-2"
+            >
+              Ir
+            </Link>
           </motion.div>
           <div className="flex gap-4 pt-12 md:pt-0">
             <button
