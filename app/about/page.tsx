@@ -51,7 +51,7 @@ const About = () => {
                                 alt="Fotografía creativa"
                                 width={500}
                                 height={500}
-                                className="rounded-lg shadow-lg"
+                                className="rounded-full shadow-lg"
                                 style={{ width: 'auto', height: 'auto' }}
                             />
                         </div>
@@ -79,7 +79,7 @@ const About = () => {
                                 alt="Creación de contenido digital"
                                 width={500}
                                 height={500}
-                                className="rounded-lg shadow-lg"
+                                className="rounded-full shadow-lg"
                                 style={{ width: 'auto', height: 'auto' }}
                             />
                         </div>
