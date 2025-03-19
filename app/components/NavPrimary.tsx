@@ -40,7 +40,7 @@ const NavPrimary = () => {
                             className="h-20 w-auto"
                         />
                     </Link>
-                    <span className='self-center font-bold text-gray-900 dark:text-white text-2xl'> Shara's Photography</span>
+                    <span className='self-center font-bold text-gray-900 dark:text-white text-2xl'> Sharay Henriquez</span>
                 </div>
                 <div className="flex lg:hidden">
                     <button
@@ -115,7 +115,7 @@ const NavPrimary = () => {
                 <DialogPanel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
                     <div className="flex items-center justify-between">
                         <Link href="/" className="-m-1.5 p-1.5">
-                            <span className="">Shara's Photography</span>
+                            <span className="">Sharay Henriquez</span>
                             <img
                                 alt=""
                                 src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600"

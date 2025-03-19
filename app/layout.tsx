@@ -1,3 +1,4 @@
+import ScrollToTopButton from "@/components/ScrollToTopButton";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Footer from "./components/Footer";
@@ -31,13 +32,10 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Header />
-
         {children}
-
+        <ScrollToTopButton />
         <Footer />
-
       </body>
-      
     </html>
   );
 }

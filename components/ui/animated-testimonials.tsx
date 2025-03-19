@@ -119,14 +119,14 @@ export const AnimatedTestimonials = ({
             <Link
               href={testimonials[active].slug}
             >
-              <h3 className="text-4xl font-extrabold dark:text-white text-black">
+              <h1 className="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white text-black">
                 {testimonials[active].name}
-              </h3>
+              </h1>
             </Link>
             <p className="text-sm text-gray-500 dark:text-neutral-500">
               {testimonials[active].designation}
             </p>
-            <motion.p className="text-lg text-gray-500 mt-8 mb-6 dark:text-neutral-300">
+            <motion.p className="max-w-2xl mb-6 text-lg lg:mb-8 md:text-lg lg:text-xl text-gray-500 mt-8 dark:text-neutral-300">
               {testimonials[active].quote.split(" ").map((word, index) => (
                 <motion.span
                   key={index}
@@ -153,7 +153,7 @@ export const AnimatedTestimonials = ({
             </motion.p>
             <Link
               href={testimonials[active].slug}
-              className="rounded bg-gray-600 hover:bg-gray-500 text-white p-2"
+              className="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-white border bg-gray-700 border-gray-300 rounded-lg hover:bg-gray-600 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800"
             >
               Ir
             </Link>

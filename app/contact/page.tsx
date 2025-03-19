@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { FaInstagram, FaPinterest, FaTiktok, FaWhatsapp } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaTiktok, FaWhatsapp } from "react-icons/fa";
 
 const Page = () => {
   const [showWhatsAppForm, setShowWhatsAppForm] = useState(true);
@@ -118,11 +118,11 @@ const Page = () => {
                 <FaTiktok className="text-gray-900 dark:text-white text-3xl hover:text-indigo-500 transition" />
               </a>
               <a
-                href="https://www.pinterest.com"
+                href="https://www.facebook.com/profile.php?id=61554995486929"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <FaPinterest className="text-gray-900 dark:text-white text-3xl hover:text-indigo-500 transition" />
+                <FaFacebook className="text-gray-900 dark:text-white text-3xl hover:text-indigo-500 transition" />
               </a>
               <a
                 href="https://wa.me/56985579335"
@@ -142,7 +142,7 @@ const Page = () => {
                 onClick={() => setShowWhatsAppForm(true)}
                 className={`px-4 py-2 rounded-lg font-semibold ${
                   showWhatsAppForm
-                    ? "bg-green-500 text-white"
+                    ? "bg-green-700 text-white"
                     : "bg-gray-200 dark:bg-gray-600 text-gray-800 dark:text-white"
                 }`}
               >
@@ -226,7 +226,7 @@ const Page = () => {
                     href={handleWhatsAppClick()}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block w-full px-4 py-2 text-center bg-green-500 text-white rounded-lg hover:bg-green-400 transition"
+                    className="block w-full px-4 py-2 text-center bg-green-700 text-white rounded-lg hover:bg-green-600 transition"
                   >
                     Enviar a WhatsApp
                   </a>

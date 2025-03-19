@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import { AnimatedService } from './components/AnimatedService';
 import { AnimatedPin } from './components/AnimatePin';
 import servicesDataSlug from './getData/servicesDataSlug';
 
@@ -18,6 +19,7 @@ const page = () => {
         }}
       >
         <div className="absolute inset-0 bg-opacity-50 flex flex-col justify-center items-center text-center text-white px-6">
+          {/* Titulo */}
           <motion.h1
             className="text-4xl md:text-6xl font-bold mb-4 bg-gray-700/70 rounded-md p-4"
             initial={{ opacity: 0, y: -50 }}
@@ -26,6 +28,7 @@ const page = () => {
           >
             Servicios
           </motion.h1>
+          {/* Descripcion */}
           <motion.p
             className="max-w-2xl text-gray-300 bg-gray-700/70 rounded-md p-4"
             initial={{ opacity: 0, y: 50 }}
@@ -36,7 +39,12 @@ const page = () => {
           </motion.p>
         </div>
       </section>
-
+      {/* <AnimatedServiceDemo /> */}
+      <section className="mt-8 bg-white dark:bg-gray-900">
+        <div className="container mx-auto">
+          <AnimatedService />
+        </div>
+      </section>
       {/* Servicios */}
       <section id="services" className="py-16">
         <div className="container mx-auto px-6 space-y-16">
@@ -50,7 +58,7 @@ const page = () => {
               transition={{ duration: 1 + index * 0.2 }}
             >
               {/* Componente de Imagen Nueva */}
-              <div className="lg:w-1/2">
+              <div className="lg:w-1/2 mb-12">
                 <AnimatedPin
                   title={servicio.titulo}
                   href={`/services/${servicio.slug}`}
@@ -59,11 +67,11 @@ const page = () => {
               </div>
 
               {/* Contenido */}
-              <div className={`lg:w-1/2 ${index % 2 === 0 ? 'lg:pl-12' : 'lg:pr-12'} mt-8 lg:mt-0`}>
-                <h2 className="text-3xl font-bold text-gray-900 dark:text-white">
+              <div className={`lg:w-1/2 ${index % 2 === 0 ? 'lg:pl-12' : 'lg:pr-12'} mt-16 lg:mt-10`}>
+                <h2 className="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white">
                   {servicio.titulo}
                 </h2>
-                <p className="mt-4 text-gray-600 dark:text-gray-400">
+                <p className="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">
                   {servicio.descripcion}
                 </p>
                 <Link href={`/services/${servicio.slug}`} legacyBehavior>

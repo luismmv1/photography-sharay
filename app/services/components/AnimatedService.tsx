@@ -1,7 +1,7 @@
 import { AnimatedTestimonials } from "@/components/ui/animated-testimonials";
 import servicesDataSlug from "../getData/servicesDataSlug";
 
-export function AnimatedServiceDemo() {
+export function AnimatedService() {
   const services = servicesDataSlug.map(service => ({
     quote: service.descripcion,
     name: service.titulo,

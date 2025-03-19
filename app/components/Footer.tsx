@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { FaInstagram, FaPinterest, FaTiktok, FaWhatsapp } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaTiktok, FaWhatsapp } from "react-icons/fa";
 
 const Footer = () => {
   const pathname = usePathname();
@@ -27,7 +27,7 @@ const Footer = () => {
             whileHover={{ scale: 1.1 }}
             transition={{ type: "spring", stiffness: 100 }}
           >
-            Shara's Photography
+            Sharay Henriquez
           </motion.h2>
           <p className="text-gray-400 text-sm">
             Capturando momentos inolvidables y transformándolos en arte. Más de 10 años de experiencia en fotografía y contenido digital.
@@ -75,7 +75,7 @@ const Footer = () => {
               href="https://www.instagram.com/sharavision.cl/"
               target="_blank"
               rel="noopener noreferrer"
-              whileHover={{ scale: 1.2 }}
+              whileHover={{ scale: 1.6 }}
               transition={{ type: "spring", stiffness: 200 }}
             >
               <FaInstagram className="text-2xl hover:text-indigo-500 transition" />
@@ -84,28 +84,28 @@ const Footer = () => {
               href="https://www.tiktok.com/@sharayhenriquezvi"
               target="_blank"
               rel="noopener noreferrer"
-              whileHover={{ scale: 1.2 }}
+              whileHover={{ scale: 1.6 }}
               transition={{ type: "spring", stiffness: 200 }}
             >
               <FaTiktok className="text-2xl hover:text-indigo-500 transition" />
             </motion.a>
             <motion.a
-              href="https://www.pinterest.com"
+              href="https://www.facebook.com/profile.php?id=61554995486929"
               target="_blank"
               rel="noopener noreferrer"
-              whileHover={{ scale: 1.2 }}
+              whileHover={{ scale: 1.6 }}
               transition={{ type: "spring", stiffness: 200 }}
             >
-              <FaPinterest className="text-2xl hover:text-indigo-500 transition" />
+              <FaFacebook className="text-2xl hover:text-indigo-500 transition" />
             </motion.a>
             <motion.a
               href="https://wa.me/56985579335"
               target="_blank"
               rel="noopener noreferrer"
-              whileHover={{ scale: 1.2 }}
+              whileHover={{ scale: 1.6 }}
               transition={{ type: "spring", stiffness: 200 }}
             >
-              <FaWhatsapp className="text-2xl hover:text-indigo-500 transition" />
+              <FaWhatsapp className="text-3xl hover:text-indigo-500 transition" />
             </motion.a>
           </div>
         </div>
@@ -120,7 +120,7 @@ const Footer = () => {
         transition={{ duration: 1 }}
       >
         <hr className="border-gray-700 mb-6" />
-        © {new Date().getFullYear()} Shara's Photography By Luis Mogollon. Todos los derechos reservados.
+        © {new Date().getFullYear()} Sharay Henriquez By Luis Mogollon. Todos los derechos reservados.
       </motion.div>
     </footer>
   );

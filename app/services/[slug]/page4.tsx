@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { AnimatedServiceDemo } from '../components/AnimatedServiceDemo';
+import { AnimatedService } from '../components/AnimatedService';
 import servicesDataSlug from '../getData/servicesDataSlug';
 
 interface ServiceData {
@@ -87,7 +87,7 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
       {/* Integración del componente AnimatedServiceDemo */}
       <section className="mt-8 bg-white dark:bg-gray-900">
         <div className="container mx-auto">
-          <AnimatedServiceDemo />
+          <AnimatedService />
         </div>
       </section>
     </div>

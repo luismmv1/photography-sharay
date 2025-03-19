@@ -83,6 +83,7 @@ const page = () => {
             className="mt-6 inline-block px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-500 transition"
           >
             Contáctame
+            
           </Link>
         </motion.div>
       </section>

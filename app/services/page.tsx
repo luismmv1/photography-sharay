@@ -1,8 +1,8 @@
+
 'use client';
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { AnimatedServiceDemo } from './components/AnimatedServiceDemo';
 import { AnimatedPin } from './components/AnimatePin';
 import servicesDataSlug from './getData/servicesDataSlug';
 
@@ -40,11 +40,11 @@ const page = () => {
         </div>
       </section>
       {/* <AnimatedServiceDemo /> */}
-      <section className="mt-8 bg-white dark:bg-gray-900">
+      {/* <section className="mt-8 bg-white dark:bg-gray-900">
         <div className="container mx-auto">
-          <AnimatedServiceDemo />
+          <AnimatedService />
         </div>
-      </section>
+      </section> */}
       {/* Servicios */}
       <section id="services" className="py-16">
         <div className="container mx-auto px-6 space-y-16">
