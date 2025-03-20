@@ -143,7 +143,7 @@ const servicesDataSlug = [
     descripcion2: 'Cada evento especial tiene su propio brillo. Nuestro servicio profesional garantiza capturar la esencia de tus reuniones, celebraciones y momentos destacados, con fotografías que van más allá del simple registro, contando una historia visual única.',
     imagen: '/pages/services/eventos/eventos.jpg',
     images: [
-      '/pages/services/eventos//eventos.jpg',
+      '/pages/services/eventos/eventos.jpg',
       '/pages/services/eventos/eventos1.jpg',
       '/pages/services/eventos/eventos2.png',
       '/pages/services/eventos/eventos3.jpg',

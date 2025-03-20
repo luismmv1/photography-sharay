@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { BsFillEnvelopeAtFill } from "react-icons/bs";
 import { FaFacebook, FaInstagram, FaTiktok, FaWhatsapp } from "react-icons/fa";
 
 const Page = () => {
@@ -189,7 +190,10 @@ const Page = () => {
                     type="submit"
                     className="w-full px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-500 transition"
                   >
-                    Enviar
+                    <div className="flex items-center justify-center space-x-2">
+                      <span>Enviar</span>
+                      <BsFillEnvelopeAtFill className="text-center text-2xl"/>
+                    </div>
                   </button>
                 </form>
               </motion.div>

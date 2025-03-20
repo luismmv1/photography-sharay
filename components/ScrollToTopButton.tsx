@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { FaArrowUp } from 'react-icons/fa';
+import { BsShiftFill } from 'react-icons/bs';
 
 export default function ScrollToTopButton() {
   const [isVisible, setIsVisible] = useState(false);
@@ -39,7 +39,7 @@ export default function ScrollToTopButton() {
       }`}
       aria-label="Ir al inicio"
     >
-          <FaArrowUp />
+          <BsShiftFill />
     </button>
   );
 }

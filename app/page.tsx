@@ -4,6 +4,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { BsFillEnvelopeAtFill } from "react-icons/bs";
 import { FaPhoneAlt } from "react-icons/fa";
 
 // Lista de imágenes para el slider
@@ -84,7 +85,7 @@ const page = () => {
             className="mt-6 inline-block px-10 py-3 bg-indigo-600 text-white font-bold rounded-lg hover:bg-indigo-500 transition"
           >
             <div className="flex items-center space-x-2">
-              <FaPhoneAlt className="text-center text-2xl"/>
+              <FaPhoneAlt className="text-center text-2xl" />
               <span>
                 Contáctame
               </span>
@@ -301,12 +302,15 @@ const page = () => {
             <textarea
               placeholder="Mensaje"
               className="w-full px-4 py-2 border rounded-lg"
-            ></textarea>
+            />
             <button
               type="submit"
-              className="w-full px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-500 transition"
+              className="w-full px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-500 transition text-center"
             >
-              Enviar
+              <div className="flex items-center justify-center space-x-2">
+                <span>Enviar</span>
+                <BsFillEnvelopeAtFill className="text-center text-2xl" />
+              </div>
             </button>
           </form>
         </motion.div>
@@ -315,4 +319,4 @@ const page = () => {
   )
 }
 
-export default page
+export default page;
