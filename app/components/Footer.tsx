@@ -120,7 +120,7 @@ const Footer = () => {
         transition={{ duration: 1 }}
       >
         <hr className="border-gray-700 mb-6" />
-        © {new Date().getFullYear()} Sharay Henriquez By Luis Mogollon. Todos los derechos reservados.
+        Copyright © {new Date().getFullYear()} Sharay Henriquez By Luis Mogollon. Todos los derechos reservados.
       </motion.div>
     </footer>
   );

@@ -5,6 +5,8 @@ import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { BsFillSendFill } from "react-icons/bs";
+
 
 type Testimonial = {
   quote: string;
@@ -155,7 +157,10 @@ export const AnimatedTestimonials = ({
               href={testimonials[active].slug}
               className="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-white border bg-gray-700 border-gray-300 rounded-lg hover:bg-gray-600 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800"
             >
-              Ir
+              <div className="flex items-center space-x-2">
+                <span>Ir al Servicio</span>
+                <BsFillSendFill />
+              </div>
             </Link>
           </motion.div>
           <div className="flex gap-4 pt-12 md:pt-0">

@@ -81,10 +81,10 @@ const page = () => {
           </h2>
           <Link
             href="/contact"
-            className="mt-6 inline-block px-10 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-500 transition"
+            className="mt-6 inline-block px-10 py-3 bg-indigo-600 text-white font-bold rounded-lg hover:bg-indigo-500 transition"
           >
             <div className="flex items-center space-x-2">
-              <FaPhoneAlt />
+              <FaPhoneAlt className="text-center text-2xl"/>
               <span>
                 Contáctame
               </span>

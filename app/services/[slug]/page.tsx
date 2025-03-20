@@ -2,7 +2,10 @@
 
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
+import { BsReplyFill } from 'react-icons/bs';
+import { FaWhatsapp } from 'react-icons/fa';
 import servicesDataSlug from '../getData/servicesDataSlug';
+
 
 interface ServiceData {
   slug: string;
@@ -56,7 +59,14 @@ export default function ServicePage({ params }: PageProps) {
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-white border bg-black border-gray-300 rounded-lg hover:bg-gray-700 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800"
           >
-            Volver a Servicios
+            <div className='flex text-center space-x-2'>
+              <BsReplyFill
+                className='text-center text-2xl'
+              />
+              <span>
+                Volver a Servicios
+              </span>
+            </div>
           </a>
         </div>
       </section>
@@ -75,7 +85,14 @@ export default function ServicePage({ params }: PageProps) {
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-white border bg-green-700 border-gray-300 rounded-lg hover:bg-green-600 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800"
             >
-              Contactar por WhatsApp
+              <div className='flex text-center space-x-2'>
+                <span>
+                  Contactar por WhatsApp
+                </span>
+                <FaWhatsapp
+                  className='text-center text-2xl'
+                />
+              </div>
             </a>
           </div>
           <div className="hidden lg:mt-0 lg:col-span-5 lg:flex">
