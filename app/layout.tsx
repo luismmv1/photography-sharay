@@ -16,8 +16,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Shara`s Photography",
-  description: "Portafolio Shara`s Photography",
+  title: "Sharay Henriquez",
+  description: "Portafolio Sharay Henriquez",
 };
 
 export default function RootLayout({

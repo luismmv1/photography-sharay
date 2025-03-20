@@ -78,7 +78,7 @@ const Footer = () => {
               whileHover={{ scale: 1.6 }}
               transition={{ type: "spring", stiffness: 200 }}
             >
-              <FaInstagram className="text-2xl hover:text-indigo-500 transition" />
+              <FaInstagram className="text-3xl hover:text-indigo-500 transition" />
             </motion.a>
             <motion.a
               href="https://www.tiktok.com/@sharayhenriquezvi"
@@ -87,7 +87,7 @@ const Footer = () => {
               whileHover={{ scale: 1.6 }}
               transition={{ type: "spring", stiffness: 200 }}
             >
-              <FaTiktok className="text-2xl hover:text-indigo-500 transition" />
+              <FaTiktok className="text-3xl hover:text-indigo-500 transition" />
             </motion.a>
             <motion.a
               href="https://www.facebook.com/profile.php?id=61554995486929"
@@ -96,7 +96,7 @@ const Footer = () => {
               whileHover={{ scale: 1.6 }}
               transition={{ type: "spring", stiffness: 200 }}
             >
-              <FaFacebook className="text-2xl hover:text-indigo-500 transition" />
+              <FaFacebook className="text-3xl hover:text-indigo-500 transition" />
             </motion.a>
             <motion.a
               href="https://wa.me/56985579335"

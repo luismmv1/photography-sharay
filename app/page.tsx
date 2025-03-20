@@ -4,6 +4,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { FaPhoneAlt } from "react-icons/fa";
 
 // Lista de imágenes para el slider
 const images = [
@@ -79,11 +80,15 @@ const page = () => {
             </span>
           </h2>
           <Link
-            href="#contact"
-            className="mt-6 inline-block px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-500 transition"
+            href="/contact"
+            className="mt-6 inline-block px-10 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-500 transition"
           >
-            Contáctame
-            
+            <div className="flex items-center space-x-2">
+              <FaPhoneAlt />
+              <span>
+                Contáctame
+              </span>
+            </div>
           </Link>
         </motion.div>
       </section>
@@ -159,10 +164,10 @@ const page = () => {
             {/* Título e Introducción */}
             <h1 className="mb-2">
               <Link
-              href="/about">
-              <span className=" text-white text-4xl font-bold mb-4 bg-gray-400/30 rounded-md">
-                Sobre Mí
-              </span>
+                href="/about">
+                <span className=" text-white text-4xl font-bold mb-4 bg-gray-400/30 rounded-md">
+                  Sobre Mí
+                </span>
               </Link>
             </h1>
             <p className="text-white dark:text-gray-200 bg-gray-400/30 rounded-md">
@@ -306,7 +311,6 @@ const page = () => {
           </form>
         </motion.div>
       </section>
-
     </main>
   )
 }
