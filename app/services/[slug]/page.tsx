@@ -146,7 +146,7 @@ export default function ServicePage({ params }: PageProps) {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12 items-center">
               {service.images.map((src, index) => (
                 <motion.div
-                  className="relative overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 bg-white dark:bg-gray-700 w-80 h-auto"
+                  className="relative overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 bg-white dark:bg-gray-700 w-90 h-auto"
                   whileHover={{ scale: 1.05 }}
                 >
                   <Image
