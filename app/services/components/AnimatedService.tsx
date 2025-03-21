@@ -3,7 +3,7 @@ import servicesDataSlug from "../getData/servicesDataSlug";
 
 export function AnimatedService() {
   const services = servicesDataSlug.map(service => ({
-    quote: service.descripcion,
+    quote: service.subtitle,
     name: service.titulo,
     designation: "", // Valor vacío para agregar manualmente más tarde
     src: service.imagen, // Usar la imagen principal del servicio

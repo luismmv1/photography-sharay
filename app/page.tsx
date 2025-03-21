@@ -39,7 +39,7 @@ const page = () => {
   }, []);
   return (
     <main className="bg-white dark:bg-gray-900">
-      {/* Hero Section con Slider */}
+      {/* Hero Seccion con Slider */}
       <section className="relative flex items-center justify-center h-screen">
         {/* Slider */}
         <div className="absolute inset-0">
@@ -53,7 +53,7 @@ const page = () => {
                     backgroundImage: `url(${image})`,
                     backgroundPosition: "center center",
                     backgroundSize: "contain",
-                    /* backgroundSize: "cover" // esto ajusta la imagen completa */
+                    /* backgroundSize: "cover or contain" esto ajusta la imagen completa o repetir */
                   }}
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
@@ -72,11 +72,11 @@ const page = () => {
           animate={{ opacity: 5, y: 3 }}
           transition={{ duration: 2 }}
         >
-          <h1 className="text-4xl md:text-6xl font-bold bg-gray-500/50 rounded-md p-4">
+          <h1 className="text-4xl md:text-6xl font-bold bg-gray-700/70 rounded-md p-4">
             Capturando Momentos Inolvidables para tí.
           </h1>
           <h2 className="mt-4 text-lg  ">
-            <span className=" bg-gray-600/30 rounded-md p-2 ">
+            <span className=" bg-gray-700/70 rounded-md p-2 ">
               Explora mi portafolio y descubre mi pasión por la fotografía.
             </span>
           </h2>

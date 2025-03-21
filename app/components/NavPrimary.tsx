@@ -26,21 +26,19 @@ const NavPrimary = () => {
 
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const pathname = usePathname();
-
     return (
         
         <div className="bg-white dark:bg-gray-800">
             <nav aria-label="Global" className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
-                <div className="flex lg:flex-1">
+                <div className="flex lg:flex-1 text-white">
                     <Link href="/" className="-m-1.5 p-1.5">
-                        <span className="sr-only">Shara's Photography</span>
                         <img
-                            alt="Shara's Photography"
-                            src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600"
-                            className="h-20 w-auto"
+                            alt="logo"
+                            src='/logo png.png'
+                            className="h-20 w-auto rounded-full bg-gray-700 mr-4"
                         />
                     </Link>
-                    <span className='self-center font-bold text-gray-900 dark:text-white text-2xl'> Sharay Henriquez</span>
+                    <h2 className='self-center font-bold text-gray-900 dark:text-white text-3xl'> Sharay Henriquez</h2>
                 </div>
                 <div className="flex lg:hidden">
                     <button
@@ -114,13 +112,13 @@ const NavPrimary = () => {
                 <div className="fixed inset-0 z-10" />
                 <DialogPanel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
                     <div className="flex items-center justify-between">
-                        <Link href="/" className="-m-1.5 p-1.5">
-                            <span className="">Sharay Henriquez</span>
+                        <Link href="/" className="-m-1.5 p-1.5 flex items-center">
                             <img
                                 alt=""
-                                src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600"
-                                className="h-8 w-auto"
+                                src='/logo png.png'
+                                className="h-8 w-auto rounded-full bg-gray-700 mr-2"
                             />
+                            <span className="">Sharay Henriquez</span>
                         </Link>
                         <button
                             type="button"

@@ -36,4 +36,3 @@ export const services = [
     { name: 'Portafolio', href: '/portafolio' },
     { name: 'Contáctame', href: '/contact' },
   ];
-  

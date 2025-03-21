@@ -20,6 +20,7 @@ const Footer = () => {
         viewport={{ once: true }}
         transition={{ duration: 1 }}
       >
+        
         {/* Sección: Logo e Introducción */}
         <div>
           <motion.h2
@@ -27,9 +28,20 @@ const Footer = () => {
             whileHover={{ scale: 1.1 }}
             transition={{ type: "spring", stiffness: 100 }}
           >
-            Sharay Henriquez
+              <Link
+              href="/">
+                <div className="flex">
+                  <img
+                    src="/logo png.png"
+                    alt="Logo Sharay Henriquez"
+                    className="h-10 w-auto rounded-full bg-gray-700 mr-4"
+                    />
+                    <span>Sharay Henriquez</span>
+                  </div>
+              </Link>
+            
           </motion.h2>
-          <p className="text-gray-400 text-sm">
+          <p className="text-gray-400 text-sm text-justify">
             Capturando momentos inolvidables y transformándolos en arte. Más de 10 años de experiencia en fotografía y contenido digital.
           </p>
         </div>
@@ -119,8 +131,8 @@ const Footer = () => {
         viewport={{ once: true }}
         transition={{ duration: 1 }}
       >
-        <hr className="border-gray-700 mb-6" />
-        Copyright © {new Date().getFullYear()} Sharay Henriquez By Luis Mogollon. Todos los derechos reservados.
+        <hr className="border-gray-300 mb-12" />
+        <span>Copyright © {new Date().getFullYear()} Sharay Henriquez By Luis Mogollon. Todos los derechos reservados.</span>
       </motion.div>
     </footer>
   );

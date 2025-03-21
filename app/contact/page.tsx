@@ -13,7 +13,7 @@ const Page = () => {
   // Función para construir el enlace de WhatsApp
   const handleWhatsAppClick = () => {
     const baseUrl = "https://wa.me/56985579335";
-    const texto = `Hola Shara's Photography te escribe "${nombre}" vi tu página web y estoy interesado en tus servicios de Fotografia, tengo este mensaje para ti: "${mensaje}"`;
+    const texto = `Hola Sharay Henriquez te escribe "${nombre}" vi tu página web y estoy interesado en tus servicios de Fotografia, tengo este mensaje para ti: "${mensaje}"`;
     const encodedText = encodeURIComponent(texto); // Codifica el texto para incluirlo en la URL
     return `${baseUrl}?text=${encodedText}`;
   };

@@ -71,7 +71,7 @@ const page: React.FC = () => {
       <div className="flex-1 p-8">
         <div className="mt-8">
           <h2 className="text-2xl font-bold mb-4">Video</h2>
-          <video controls className="w-full h-[320px] rounded-lg">
+          <video controls className="w-full h-[320px] rounded-lg ">
             <source
               src="/pages/services/bodas/clics/bodas.mp4"
               type="video/mp4"

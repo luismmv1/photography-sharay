@@ -45,7 +45,7 @@ const About = () => {
                         viewport={{ once: true }}
                         transition={{ duration: 0.8 }}
                     >
-                        <div className="lg:w-1/2 ">
+                        <div className="lg:w-1/2">
                             <Image
                                 src="/pages/about/about1.jpg"
                                 alt="Fotografía creativa"
