@@ -9,7 +9,7 @@ import servicesDataSlug from '../getData/servicesDataSlug';
 
 interface ServiceData {
   slug: string;
-  titulo: string;
+  tittle: string;
   subtitle: string;
   context: string;
   imagen: string;
@@ -88,14 +88,14 @@ export default function ServicePage({ params }: PageProps) {
       </section>
       <section className='flex mx-auto justify-center'>
         <h1 className="max-w-4xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white">
-          {service.titulo}
+          {service.tittle}
         </h1>
       </section>
       <section className="bg-white dark:bg-gray-900">
         <div className="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
           <div className="mr-auto place-self-center lg:col-span-7">
             <h1 className="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white">
-              {service.titulo}
+              {service.tittle}
             </h1>
             <p className="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">
               {service.subtitle}
@@ -125,7 +125,7 @@ export default function ServicePage({ params }: PageProps) {
                 <div key={index} className="relative">
                   <Image
                     src={src}
-                    alt={`${service.titulo} ${index + 1}`}
+                    alt={`${service.tittle} ${index + 1}`}
                     className="w-full h-auto object-cover rounded-lg"
                     width={500}
                     height={500}

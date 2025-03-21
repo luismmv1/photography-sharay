@@ -60,7 +60,7 @@ const page = () => {
               {/* Componente de Imagen Nueva */}
               <div className="lg:w-1/2 mb-12">
                 <AnimatedPin
-                  title={servicio.titulo}
+                  tittle={servicio.tittle}
                   href={`/services/${servicio.slug}`}
                   imageUrl={servicio.imagen}
                 />
@@ -69,7 +69,7 @@ const page = () => {
               {/* Contenido */}
               <div className={`lg:w-1/2 ${index % 2 === 0 ? 'lg:pl-12' : 'lg:pr-12'} mt-16 lg:mt-10`}>
                 <h2 className="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white">
-                  {servicio.titulo}
+                  {servicio.tittle}
                 </h2>
                 <p className="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">
                   {servicio.subtitle}

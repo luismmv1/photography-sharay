@@ -1,5 +1,6 @@
 'use client';
 
+import { motion } from "framer-motion";
 import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
@@ -9,7 +10,7 @@ import servicesDataSlug from '../getData/servicesDataSlug';
 
 interface ServiceData {
   slug: string;
-  titulo: string;
+  tittle: string;
   subtitle: string;
   context: string;
   imagen: string;
@@ -51,7 +52,7 @@ export default function ServicePage({ params }: PageProps) {
   const handleWhatsAppClick = () => {
     if (!service) return "#"; // Validar si no hay servicio cargado
     const baseUrl = "https://wa.me/56985579335";
-    const texto = `Hola Sharay Henriquez, vi tu sitio web y estoy interesado en tus servicios de ${service.titulo}.`;
+    const texto = `Hola Sharay Henriquez, vi tu sitio web y estoy interesado en tus servicios de ${service.tittle}.`;
     const encodedText = encodeURIComponent(texto);
     return `${baseUrl}?text=${encodedText}`;
   };
@@ -62,7 +63,7 @@ export default function ServicePage({ params }: PageProps) {
 
   return (
     <div>
-      {/* Seccion Encabezado: Titulo y botones */}
+      {/* Seccion Encabezado: tittle y botones */}
       <section
         className="relative bg-cover bg-center flex justify-around items-center h-50 w-full min-h-0 md:min-h-full"
         style={{
@@ -88,10 +89,10 @@ export default function ServicePage({ params }: PageProps) {
             </div>
           </Link>
         </div>
-        {/* Titulo del Servicio */}
+        {/* tittle del Servicio */}
         <div className='text-center'>
           <h1 className=" max-w-4xl mb-4 text-4xl font-bold tracking-tight leading-none md:text-5xl xl:text-6xl text-white bg-gray-700/70 rounded-md p-4">
-            {service.titulo}
+            {service.tittle}
           </h1>
         </div>
         {/* Boton Contactar Whatsapp */}
@@ -115,41 +116,53 @@ export default function ServicePage({ params }: PageProps) {
       </section>
 
       {/* Contenido de la Página */}
-      <section className="bg-white dark:bg-gray-900">
-        <div className="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
-          <div className="mr-auto place-self-center lg:col-span-7">
-            {/* subtitle de Servicio 1 */}
-            <h2 className="max-w-2xl mb-6 mt-6 text-2xl font-bold text-gray-500 lg:mb-8 md:text-lg lg:text-2xl dark:text-gray-400 text-justify">
-              {service.subtitle}
-            </h2>
-            {/* subtitle de Servicio 2 */}
-            <p className='max-w-2xl mt-6 mb-6 text-justify'>
-              {service.context}
-            </p>
-
+      <section className='grid container mx-auto mb-8 items-center p-12 rounded-2xl relative shadow-md overflow-hidden m-12'>
+        <div className='items-center'>
+          <div className="flex flex-row p-4">
+            <div className="basis-2/3">
+              <article>
+                <h2 className="text-justify text-3xl font-bold text-gray-500 m-12">
+                  {service.subtitle}
+                </h2>
+                <p className="text-justify text-2xl text-gray-500 m-12">
+                  {service.context}
+                </p>
+              </article>
+            </div>
+            <div className="basis-1/3 items-center text-center">
+              <motion.div
+                className="relative overflow-hidden rounded-lg  transition-shadow duration-300 bg-white   w-auto h-100"
+                whileHover={{ scale: 1.2 }}
+              >
+                <img
+                  src={service.imagen}
+                  alt=""
+                  className='w-auto h-auto rounded-lg text-center'
+                />
+              </motion.div>
+            </div>
           </div>
-          <div className="hidden lg:mt-0 lg:col-span-5 lg:flex ">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="col-span-4 col-start-2 text-center items-center">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12 items-center">
               {service.images.map((src, index) => (
-                <div key={index} className="relative">
+                <motion.div
+                  className="relative overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 bg-white dark:bg-gray-700 w-80 h-auto"
+                  whileHover={{ scale: 1.05 }}
+                >
                   <Image
                     src={src}
-                    alt={`${service.titulo} ${index + 1}`}
+                    alt={`${service.tittle} ${index + 1}`}
                     className="w-full h-auto object-cover rounded-lg"
-                    width={500}
-                    height={500}
+                    width={300}
+                    height={300}
                     priority={index === 0}
                   />
-                </div>
+                </motion.div>
               ))}
+              
             </div>
           </div>
         </div>
-      </section>
-      
-      <section className='container mx-auto mb-8 p-8'>
-      
-
       </section>
     </div>
   );
