@@ -1,12 +1,9 @@
-import { SidebarDemo } from "../components/dashboard"
+import { DashBoardSide } from "../components/dashboard"
 
 const page = () => {
   return (
     <div>
-      <div>
-      <SidebarDemo />
-      </div>
-     
+      <DashBoardSide />
     </div>
   )
 }
