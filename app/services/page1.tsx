@@ -72,7 +72,7 @@ const page = () => {
                   {servicio.titulo}
                 </h2>
                 <p className="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">
-                  {servicio.descripcion}
+                  {servicio.subtitle}
                 </p>
                 <Link href={`/services/${servicio.slug}`} legacyBehavior>
                   <a className="mt-4 inline-block px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-500 transition">
