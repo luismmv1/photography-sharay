@@ -44,14 +44,14 @@ export function DashBoardSide() {
             <SidebarLink
               link={{
                 label: "Sharay Henriquez",
-                href: "#",
+                href: "#aniversarios",
                 icon: (
                   <Image
                     src="/logo png.png"
-                    className="h-10 w-10 shrink-0 rounded-full"
+                    className="h-10 w-10 shrink-0 rounded-full bg-gray-700"
                     width={50}
                     height={50}
-                    alt="Avatar"
+                    alt="logo"
                   />
                 ),
               }}
@@ -96,8 +96,8 @@ export const LogoIcon = () => {
 // Dummy dashboard component with content
 const Dashboard = () => {
   return (
-    <div className="flex flex-1 overflow-auto mb-20">
-      <div className="p-2 md:p-12 rounded-tl-2xl border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-900 flex flex-col gap-2 flex-1 w-full h-full">
+    <div className="flex flex-1 overflow-auto mb-20 rounded-tl-2xl bg-white border border-neutral-200">
+      <div className="p-2 md:p-12 rounded-tl-2xl flex flex-col gap-2 flex-1 w-full h-full">
         {categories.map((category, idx) => (
           <div key={idx} className="mb-18">
             <h2 className="text-3xl font-bold mb-8" id={category.path}>{category.title}</h2>
