@@ -72,10 +72,10 @@ const NavPrimary = () => {
                                             <item.icon aria-hidden="true" className="size-6 text-gray-600 group-hover:text-indigo-600" />
                                         </div>
                                         <div className="flex-auto">
-                                            <a href={item.href} className="block font-semibold text-gray-900">
+                                            <Link href={item.href} className="block font-semibold text-gray-900">
                                                 {item.name}
                                                 <span className="absolute inset-0" />
-                                            </a>
+                                            </Link>
                                             <p className="mt-1 text-gray-600">{item.description}</p>
                                         </div>
                                     </div>
@@ -83,14 +83,14 @@ const NavPrimary = () => {
                             </div>
                             <div className="grid grid-cols-2 divide-x divide-gray-900/5 bg-gray-50">
                                 {callsToAction.map((item) => (
-                                    <a
+                                    <Link
                                         key={item.name}
                                         href={item.href}
                                         className="flex items-center justify-center gap-x-2.5 p-3 text-sm/6 font-semibold text-gray-900 hover:bg-gray-100"
                                     >
                                         <item.icon aria-hidden="true" className="size-5 flex-none text-gray-400" />
                                         {item.name}
-                                    </a>
+                                    </Link>
                                 ))}
                             </div>
                         </PopoverPanel>
