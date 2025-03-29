@@ -32,9 +32,10 @@ const Footer = () => {
               href="/">
                 <div className="flex">
                   <img
-                    src="/logo png.png"
-                    alt="Logo Sharay Henriquez"
-                    className="h-10 w-auto rounded-full bg-gray-700 mr-4"
+                    src='/logo/logo.png'
+                  alt="Logo Sharay Henriquez mr-4"
+                  className="h-10 w-auto"
+                    /* className="h-10 w-auto rounded-full bg-gray-700 mr-4" */
                     />
                     <span>Sharay Henriquez</span>
                   </div>

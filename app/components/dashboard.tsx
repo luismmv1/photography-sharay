@@ -47,8 +47,9 @@ export function DashBoardSide() {
                 href: "#aniversarios",
                 icon: (
                   <Image
-                    src="/logo png.png"
-                    className="h-10 w-10 shrink-0 rounded-full bg-gray-700"
+                    src="/logo/logo.png"
+                    className="h-10 w-auto shrink-0"
+                    /* className="h-10 w-10 shrink-0 rounded-full bg-gray-700" */
                     width={50}
                     height={50}
                     alt="logo"
@@ -101,7 +102,7 @@ const Dashboard = () => {
         {categories.map((category, idx) => (
           <div key={idx} className="mb-18">
             <h2 className="text-3xl font-bold mb-8" id={category.path}>{category.title}</h2>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
               {getCategoryImages(category.path).map((src, index) => (
                 <div key={index} className="relative">
                   <img src={src} alt={`${category.title} ${index + 1}`} className="w-full h-auto object-cover rounded-lg" />

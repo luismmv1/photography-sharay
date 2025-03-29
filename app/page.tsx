@@ -28,13 +28,13 @@ const images = [
 const page = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   
-  // Cambiar la imagen automáticamente cada 5 segundos
+  // Cambiar la imagen automáticamente cada X segundos
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) =>
         prevIndex === images.length - 1 ? 0 : prevIndex + 1
       );
-    }, 8000); // Cambia cada 5 segundos
+    }, 8000); // Cambia cada 8 segundos
     return () => clearInterval(interval);
   }, []);
   return (
