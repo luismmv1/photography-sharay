@@ -80,7 +80,7 @@ export function DashBoardSide() {
               <SidebarLink
                 link={{
                   label: "Sharay Henriquez",
-                  href: "#aniversarios",
+                  href: "/about",
                   icon: (
                     <Image
                       src="/logo/logo.png"
