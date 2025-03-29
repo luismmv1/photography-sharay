@@ -1,14 +1,16 @@
 "use client";
 import { cn } from "@/lib/utils";
-import Link, { LinkProps } from "next/link";
-import React, { useState, createContext, useContext } from "react";
-import { AnimatePresence, motion } from "motion/react";
 import { IconMenu2, IconX } from "@tabler/icons-react";
+import { AnimatePresence, motion } from "motion/react";
+import Link, { LinkProps } from "next/link";
+import React, { createContext, useContext, useState } from "react";
 
+// Extiende Links con la propiedad onClick
 interface Links {
   label: string;
   href: string;
   icon: React.JSX.Element | React.ReactNode;
+  onClick?: () => void; // Función opcional para manejar clics
 }
 
 interface SidebarContextProps {
@@ -17,9 +19,7 @@ interface SidebarContextProps {
   animate: boolean;
 }
 
-const SidebarContext = createContext<SidebarContextProps | undefined>(
-  undefined
-);
+const SidebarContext = createContext<SidebarContextProps | undefined>(undefined);
 
 export const useSidebar = () => {
   const context = useContext(SidebarContext);
@@ -160,7 +160,7 @@ export const SidebarLink = ({
   className,
   ...props
 }: {
-  link: Links;
+  link: Links; // Usar Links extendido con onClick
   className?: string;
   props?: LinkProps;
 }) => {
@@ -168,6 +168,7 @@ export const SidebarLink = ({
   return (
     <Link
       href={link.href}
+      onClick={link.onClick} // Ejecutar función personalizada si está definida
       className={cn(
         "flex items-center justify-start gap-2  group/sidebar py-2",
         className
