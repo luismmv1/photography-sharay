@@ -2,8 +2,8 @@
 
 import ImageModal from "@/components/imageModal/ImageModal"; // Modal para imágenes
 import Dashboard from "@/components/portfolio/Dashboard";
+import { Sidebar, SidebarBody, SidebarLink } from "@/components/portfolio/sidebar";
 import { AnimatedCircularProgressBarDemo } from "@/components/progress/progressMagicUI"; // Import progress component
-import { Sidebar, SidebarBody, SidebarLink } from "@/components/ui/sidebar";
 import { categories, getCategoryImages } from "@/getData/categoriesPortFolioData";
 import siteDataInfo from "@/getData/siteDataInfo";
 import { cn } from "@/lib/utils";
