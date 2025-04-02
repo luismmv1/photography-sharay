@@ -1,5 +1,6 @@
 'use client'
 
+import siteDataInfo from "@/components/getData/siteDataInfo"
 import {
     Dialog,
     DialogPanel,
@@ -20,7 +21,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useState } from 'react'
 
-import { callsToAction, navLinks, services } from './NavData'
+import { callsToAction, navLinks, services } from './navBar/NavData'
 
 const Header = () => {
 
@@ -33,13 +34,13 @@ const Header = () => {
                 <div>
                     <Link href="/" className="-m-1.5 p-1.5">
                         <div className="flex lg:flex-1 text-white">
-                        <img
-                            alt="logo"
-                            src='/logo/logo.png'
-                            className='h-30 w-auto'
-                            /* className="h-20 w-auto rounded-full bg-gray-700 mr-4" */
-                        />
-                    <h2 className='self-center font-bold text-gray-900 dark:text-white text-3xl'> Sharay Henriquez</h2>
+                            <img
+                                alt="logo"
+                                src={siteDataInfo.logoPng}
+                                className='h-30 w-auto'
+                                /* className="h-20 w-auto rounded-full bg-gray-700 mr-4" */
+                            />
+                            <h2 className='self-center font-bold text-gray-900 dark:text-white text-3xl'> {siteDataInfo.siteName}</h2>
                         </div>
                     </Link>
                 </div>
@@ -122,7 +123,7 @@ const Header = () => {
                                 className='h-8 w-auto mr-2'
                                 /* className="h-8 w-auto rounded-full bg-gray-700 mr-2" */
                             />
-                            <span className="">Sharay Henriquez</span>
+                            <span className="">{siteDataInfo.siteName}</span>
                         </Link>
                         <button
                             type="button"

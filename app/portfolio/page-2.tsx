@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import React, { useEffect, useState } from 'react';
-import ImageModal from './components/ImageModal';
+import ImageModal from '../../components/imageModal/ImageModal';
 import { categories, getCategoryImages } from './getData/categories';
 
 const page: React.FC = () => {

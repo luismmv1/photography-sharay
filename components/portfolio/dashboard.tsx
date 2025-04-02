@@ -1,5 +1,8 @@
 "use client";
 
+import { categories, getCategoryImages } from "@/app/portfolio/getData/categories";
+import siteDataInfo from "@/components/getData/siteDataInfo";
+import ImageModal from "@/components/imageModal/ImageModal"; // Modal para imágenes
 import { Sidebar, SidebarBody, SidebarLink } from "@/components/ui/sidebar";
 import { cn } from "@/lib/utils";
 import { IconBrandTabler } from "@tabler/icons-react";
@@ -7,8 +10,7 @@ import { motion } from "motion/react";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import ImageModal from "../portafolio/components/ImageModal"; // Modal para imágenes
-import { categories, getCategoryImages } from "../portafolio/getData/categories";
+
 
 export function DashBoardSide() {
   // Estados
@@ -79,11 +81,11 @@ export function DashBoardSide() {
             <div>
               <SidebarLink
                 link={{
-                  label: "Sharay Henriquez",
+                  label: siteDataInfo.siteName,
                   href: "/about",
                   icon: (
                     <Image
-                      src="/logo/logo.png"
+                      src={siteDataInfo.logoPng}
                       className="h-10 w-auto shrink-0"
                       width={50}
                       height={50}

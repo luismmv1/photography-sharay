@@ -33,6 +33,6 @@ export const services = [
   export const navLinks = [
     { name: 'Inicio', href: '/' },
     { name: 'Sobre Mi', href: '/about' },
-    { name: 'Portafolio', href: '/portafolio' },
+    { name: 'Portafolio', href: '/portfolio' },
     { name: 'Contáctame', href: '/contact' },
   ];

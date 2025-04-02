@@ -1,8 +1,9 @@
+import siteDataInfo from "@/components/getData/siteDataInfo";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import Footer from "./components/Footer";
-import Header from "./components/Header";
+import Footer from "../components/footer/Footer";
+import Header from "../components/header/Header";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -16,8 +17,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Sharay Henriquez",
-  description: "Portafolio Sharay Henriquez",
+  title: siteDataInfo.siteName,
+  description: siteDataInfo.siteDescription,
 };
 
 export default function RootLayout({

@@ -1,98 +1,17 @@
 'use client'
 
-import { AnimatePresence, motion } from "framer-motion";
+import WhatsAppForm from "@/components/contactForm/WhatsAppForm";
+import { aboutLanding } from "@/components/getData/aboutData";
+import Slider from "@/components/sliders/Slider";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
-import { BsFillEnvelopeAtFill } from "react-icons/bs";
-import { FaPhoneAlt } from "react-icons/fa";
-
-// Lista de imágenes para el slider
-const images = [
-    "/pages/home/sliders/slide.jpg",
-    "/pages/home/sliders/slide1.jpg",
-    "/pages/home/sliders/slide2.png",
-    "/pages/home/sliders/slide3.png",
-    "/pages/home/sliders/slide4.png",
-    "/pages/home/sliders/slide5.jpg",
-    "/pages/home/sliders/slide6.jpg",
-    "/pages/home/sliders/slide7.jpg",
-    "/pages/home/sliders/slide8.jpg",
-    "/pages/home/sliders/slide9.jpg",
-    "/pages/home/sliders/slide10.jpg",
-    "/pages/home/sliders/slide11.jpg",
-    "/pages/home/sliders/slide12.jpg",
-
-];
 
 const page = () => {
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
   
-  // Cambiar la imagen automáticamente cada X segundos
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentImageIndex((prevIndex) =>
-        prevIndex === images.length - 1 ? 0 : prevIndex + 1
-      );
-    }, 8000); // Cambia cada 8 segundos
-    return () => clearInterval(interval);
-  }, []);
   return (
     <main className="bg-white dark:bg-gray-900">
-      {/* Hero Seccion con Slider */}
-      <section className="relative flex items-center justify-center h-screen">
-        {/* Slider */}
-        <div className="absolute inset-0">
-          <AnimatePresence>
-            {images.map((image, index) =>
-              index === currentImageIndex ? (
-                <motion.div
-                  key={image}
-                  className="absolute inset-0 bg-cover bg-center"
-                  style={{
-                    backgroundImage: `url(${image})`,
-                    backgroundPosition: "center center",
-                    backgroundSize: "contain",
-                    /* backgroundSize: "cover or contain" esto ajusta la imagen completa o repetir */
-                  }}
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                  transition={{ duration: 1 }}
-                />
-              ) : null
-            )}
-          </AnimatePresence>
-        </div>
-
-        {/* Contenido sobre el slider */}
-        <motion.div
-          className="relative z-10 text-center text-white"
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 5, y: 3 }}
-          transition={{ duration: 2 }}
-        >
-          <h1 className="text-4xl md:text-6xl font-bold bg-gray-700/70 rounded-md p-4">
-            Capturando Momentos Inolvidables para tí.
-          </h1>
-          <h2 className="mt-4 text-lg  ">
-            <span className=" bg-gray-700/70 rounded-md p-2 ">
-              Explora mi portafolio y descubre mi pasión por la fotografía.
-            </span>
-          </h2>
-          <Link
-            href="/contact"
-            className="mt-6 inline-block px-10 py-3 bg-indigo-600 text-white font-bold rounded-lg hover:bg-indigo-500 transition"
-          >
-            <div className="flex items-center space-x-2">
-              <FaPhoneAlt className="text-center text-2xl" />
-              <span>
-                Contáctame
-              </span>
-            </div>
-          </Link>
-        </motion.div>
-      </section>
+      <Slider/>
 
       {/* Services Section */}
       <section id="services" className="py-16">
@@ -167,12 +86,12 @@ const page = () => {
               <Link
                 href="/about">
                 <span className=" text-white text-4xl font-bold mb-4 bg-gray-400/30 rounded-md">
-                  Sobre Mí
+                  {aboutLanding.title}
                 </span>
               </Link>
             </h1>
             <p className="text-white dark:text-gray-200 bg-gray-400/30 rounded-md">
-              Mi amor por la fotografía y la creación de contenido digital guía cada proyecto que realizo. Capturo momentos únicos y transformo ideas en arte.
+              {aboutLanding.description}
             </p>
           </motion.div>
 
@@ -270,50 +189,10 @@ const page = () => {
       </section>
   
       {/* Contact Section */}
-      <section id="contact" className="py-16">
-        <motion.div
-          className="container mx-auto text-center"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 1 }}
-        >
-          <Link
-            href="/contact"
-          >
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white">
-              Contáctame
-            </h2>
-          </Link>
-          <p className="mt-4 text-gray-600 dark:text-gray-400">
-            Estoy aquí para ayudarte con tus necesidades fotográficas.
-          </p>
-          <form className="mt-8 mx-auto max-w-lg space-y-4">
-            <input
-              type="text"
-              placeholder="Tu nombre"
-              className="w-full px-4 py-2 border rounded-lg"
-            />
-            <input
-              type="email"
-              placeholder="Tu correo"
-              className="w-full px-4 py-2 border rounded-lg"
-            />
-            <textarea
-              placeholder="Mensaje"
-              className="w-full px-4 py-2 border rounded-lg"
-            />
-            <button
-              type="submit"
-              className="w-full px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-500 transition text-center"
-            >
-              <div className="flex items-center justify-center space-x-2">
-                <span>Enviar</span>
-                <BsFillEnvelopeAtFill className="text-center text-2xl" />
-              </div>
-            </button>
-          </form>
-        </motion.div>
+      <section id="contact" className="py-16 items-center">
+        <div className="grid container mx-auto mb-8 items-center p-12 rounded-2xl relative shadow-md overflow-hidden m-12">
+        <WhatsAppForm/>
+        </div>
       </section>
     </main>
   )

@@ -1,9 +1,10 @@
 'use client'
 
+import siteDataInfo from "@/components/getData/siteDataInfo";
+import SocialLinks from "@/components/socialLinks/SocialLinks";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { FaFacebook, FaInstagram, FaTiktok, FaWhatsapp } from "react-icons/fa";
 
 const Footer = () => {
   const pathname = usePathname();
@@ -28,22 +29,22 @@ const Footer = () => {
             whileHover={{ scale: 1.1 }}
             transition={{ type: "spring", stiffness: 100 }}
           >
-              <Link
+            <Link
               href="/">
-                <div className="flex">
-                  <img
-                    src='/logo/logo.png'
+              <div className="flex">
+                <img
+                  src={siteDataInfo.logoPng}
                   alt="Logo Sharay Henriquez mr-4"
                   className="h-10 w-auto"
-                    /* className="h-10 w-auto rounded-full bg-gray-700 mr-4" */
-                    />
-                    <span>Sharay Henriquez</span>
-                  </div>
-              </Link>
+                /* className="h-10 w-auto rounded-full bg-gray-700 mr-4" */
+                />
+                <span>{siteDataInfo.siteName}</span>
+              </div>
+            </Link>
             
           </motion.h2>
           <p className="text-gray-400 text-sm text-justify">
-            Capturando momentos inolvidables y transformándolos en arte. Más de 10 años de experiencia en fotografía y contenido digital.
+            {siteDataInfo.siteSlogan}
           </p>
         </div>
 
@@ -75,53 +76,16 @@ const Footer = () => {
         <div>
           <h3 className="text-lg font-semibold mb-4">Contáctame</h3>
           <ul className="space-y-2 text-gray-400">
-            <li>📞 Teléfono: +56985579335</li>
-            <li>📧 Email: sharayhv@icloud.com</li>
+            <li>📞 Teléfono: {siteDataInfo.contactPhones}</li>
+            <li>📧 Email: {siteDataInfo.contactEmails}</li>
           </ul>
         </div>
 
         {/* Sección: Redes Sociales */}
         <div>
-          <h3 className="text-lg font-semibold mb-4">Sígueme</h3>
-          <div className="flex space-x-4">
-            <motion.a
-              href="https://www.instagram.com/sharavision.cl/"
-              target="_blank"
-              rel="noopener noreferrer"
-              whileHover={{ scale: 1.6 }}
-              transition={{ type: "spring", stiffness: 200 }}
-            >
-              <FaInstagram className="text-3xl hover:text-indigo-500 transition" />
-            </motion.a>
-            <motion.a
-              href="https://www.tiktok.com/@sharayhenriquezvi"
-              target="_blank"
-              rel="noopener noreferrer"
-              whileHover={{ scale: 1.6 }}
-              transition={{ type: "spring", stiffness: 200 }}
-            >
-              <FaTiktok className="text-3xl hover:text-indigo-500 transition" />
-            </motion.a>
-            <motion.a
-              href="https://www.facebook.com/profile.php?id=61554995486929"
-              target="_blank"
-              rel="noopener noreferrer"
-              whileHover={{ scale: 1.6 }}
-              transition={{ type: "spring", stiffness: 200 }}
-            >
-              <FaFacebook className="text-3xl hover:text-indigo-500 transition" />
-            </motion.a>
-            <motion.a
-              href="https://wa.me/56985579335"
-              target="_blank"
-              rel="noopener noreferrer"
-              whileHover={{ scale: 1.6 }}
-              transition={{ type: "spring", stiffness: 200 }}
-            >
-              <FaWhatsapp className="text-3xl hover:text-indigo-500 transition" />
-            </motion.a>
-          </div>
+          <SocialLinks/>
         </div>
+        
       </motion.div>
 
       {/* Línea Divisoria y Copyright */}
@@ -133,7 +97,16 @@ const Footer = () => {
         transition={{ duration: 1 }}
       >
         <hr className="border-gray-300 mb-12" />
-        <span>Copyright © {new Date().getFullYear()} Sharay Henriquez By Luis Mogollon. Todos los derechos reservados.</span>
+        <span>
+          Copyright © {new Date().getFullYear()} {siteDataInfo.siteName} By <a
+            href={`${siteDataInfo.contactWebSiteSupports}`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {siteDataInfo.contactSupport}
+          </a>
+          . Todos los derechos reservados.
+        </span>
       </motion.div>
     </footer>
   );
