@@ -1,11 +1,11 @@
 "use client";
 
-import ImageModal from "@/components/imageModal/ImageModal"; // Modal para imágenes
-import Dashboard from "@/components/portfolio/Dashboard";
-import { Sidebar, SidebarBody, SidebarLink } from "@/components/portfolio/sidebar";
-import { AnimatedCircularProgressBarDemo } from "@/components/progress/progressMagicUI"; // Import progress component
-import { categories, getCategoryImages } from "@/getData/categoriesPortFolioData";
-import siteDataInfo from "@/getData/siteDataInfo";
+import ImageModal from "@/app/components/imageModal/ImageModal"; // Modal para imágenes
+import Dashboard from "@/app/components/portfolio/Dashboard";
+import { Sidebar, SidebarBody, SidebarLink } from "@/app/components/portfolio/sidebar";
+import { AnimatedCircularProgressBarDemo } from "@/app/components/progress/progressMagicUI"; // Import progress component
+import { categories, getCategoryImages } from "@/app/getData/categoriesPortFolioData";
+import siteDataInfo from "@/app/getData/siteDataInfo";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import { useEffect, useState } from "react";

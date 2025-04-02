@@ -1,9 +1,9 @@
 'use client';
 
+import { categories, getCategoryImages } from '@/app/getData/categoriesPortFolioData';
 import { motion } from 'framer-motion';
 import React, { useEffect, useState } from 'react';
-import ImageModal from '../../components/imageModal/ImageModal';
-import { categories, getCategoryImages } from '../../getData/categoriesPortFolioData';
+import ImageModal from '../components/imageModal/ImageModal';
 
 const page: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('Todo');

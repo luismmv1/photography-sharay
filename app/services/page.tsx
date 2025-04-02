@@ -1,6 +1,6 @@
 'use client';
 
-import { AnimatedService } from '@/components/services/AnimatedService';
+import { AnimatedService } from '@/app/components/services/AnimatedService';
 import { motion } from 'framer-motion';
 
 const page = () => {

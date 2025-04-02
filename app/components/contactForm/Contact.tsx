@@ -1,7 +1,7 @@
 "use client";
 
-import EmailForm from "@/components/contactForm/EmailForm";
-import WhatsAppForm from "@/components/contactForm/WhatsAppForm";
+import EmailForm from "@/app/components/contactForm/EmailForm";
+import WhatsAppForm from "@/app/components/contactForm/WhatsAppForm";
 import { useState } from "react";
 
 const Contact = () => {

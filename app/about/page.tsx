@@ -1,6 +1,6 @@
 "use client";
 
-import { about, aboutGallery, aboutGalleryInfo, aboutMe, experienceInfo, experiences, } from "@/getData/aboutData";
+import { about, aboutGallery, aboutGalleryInfo, aboutMe, experienceInfo, experiences, } from "@/app/getData/aboutData";
 import { motion } from "framer-motion";
 import Image from "next/image";
 

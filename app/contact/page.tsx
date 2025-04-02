@@ -1,8 +1,8 @@
 'use client'
 
-import Contact from "@/components/contactForm/Contact";
-import SocialLinks from "@/components/socialLinks/SocialLinks";
-import siteDataInfo from "@/getData/siteDataInfo";
+import Contact from "@/app/components/contactForm/Contact";
+import SocialLinks from "@/app/components/socialLinks/SocialLinks";
+import siteDataInfo from "@/app/getData/siteDataInfo";
 import { BsEnvelopeAtFill, BsPhoneFill } from "react-icons/bs";
 
 const page = () => {

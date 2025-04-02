@@ -1,7 +1,7 @@
 "use client";
 
-import { FormErrors } from "@/getData/interfacesDataForm"; // Import interfaces
-import formvalidations from "@/getData/validationsDataForm"; // Import validations
+import { FormErrors } from "@/app/getData/interfacesDataForm"; // Import interfaces
+import formvalidations from "@/app/getData/validationsDataForm"; // Import validations
 import { motion } from "motion/react";
 import React, { useState } from "react";
 import { toast, Toaster } from "react-hot-toast";

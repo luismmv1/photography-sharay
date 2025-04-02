@@ -1,4 +1,4 @@
-import { aboutLanding, aboutLandingCards } from "@/getData/aboutData";
+import { aboutLanding, aboutLandingCards } from "@/app/getData/aboutData";
 import { motion } from "framer-motion";
 import Link from "next/link";
 

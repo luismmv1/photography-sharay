@@ -1,4 +1,4 @@
-import { categories, getCategoryImages } from "@/getData/categoriesPortFolioData";
+import { categories, getCategoryImages } from "@/app/getData/categoriesPortFolioData";
 
 
 

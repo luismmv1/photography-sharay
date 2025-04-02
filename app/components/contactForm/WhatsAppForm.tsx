@@ -1,8 +1,8 @@
 "use client";
 
-import contactFormData from "@/getData/contactDataForm"; // Importar datos del sitio web
-import { FormData, FormErrors } from "@/getData/interfacesDataForm"; // Importar interfaces
-import validationsDataForm from "@/getData/validationsDataForm"; // Importar validaciones
+import contactFormData from "@/app/getData/contactDataForm"; // Importar datos del sitio web
+import { FormData, FormErrors } from "@/app/getData/interfacesDataForm"; // Importar interfaces
+import validationsDataForm from "@/app/getData/validationsDataForm"; // Importar validaciones
 import { motion } from "motion/react";
 import React, { useState } from "react";
 import { toast, Toaster } from "react-hot-toast";

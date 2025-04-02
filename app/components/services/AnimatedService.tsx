@@ -1,5 +1,5 @@
-import { AnimatedTestimonials } from "@/components/services/animated-testimonials";
-import servicesDataSlug from "@/getData/servicesDataSlug";
+import { AnimatedTestimonials } from "@/app/components/services/animated-testimonials";
+import servicesDataSlug from "@/app/getData/servicesDataSlug";
 
 export function AnimatedService() {
   const services = servicesDataSlug.map(service => ({

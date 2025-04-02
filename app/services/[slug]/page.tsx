@@ -1,7 +1,7 @@
 "use client";
 
-import { AnimatedCircularProgressBarDemo } from "@/components/progress/progressMagicUI";
-import servicesDataSlug from "@/getData/servicesDataSlug";
+import { AnimatedCircularProgressBarDemo } from "@/app/components/progress/progressMagicUI";
+import servicesDataSlug from "@/app/getData/servicesDataSlug";
 import { constructWhatsAppLink } from "@/lib/utils"; // Import the WhatsApp link utility
 import { motion } from "framer-motion";
 import Image from "next/image";

@@ -1,10 +1,10 @@
 'use client'
 
-import AboutLanding from "@/components/about/AboutLanding";
-import WhatsAppForm from "@/components/contactForm/WhatsAppForm";
-import PortFolioLanding from "@/components/portfolio/PortFolioLanding";
-import ServicesLanding from "@/components/services/ServicesLanding";
-import Slider from "@/components/sliders/Slider";
+import AboutLanding from "@/app/components/about/AboutLanding";
+import WhatsAppForm from "@/app/components/contactForm/WhatsAppForm";
+import PortFolioLanding from "@/app/components/portfolio/PortFolioLanding";
+import ServicesLanding from "@/app/components/services/ServicesLanding";
+import Slider from "@/app/components/sliders/Slider";
 
 const page = () => {
   

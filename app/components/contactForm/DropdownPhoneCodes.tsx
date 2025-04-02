@@ -1,6 +1,6 @@
 "use client";
 
-import codeCountryDataForm from "@/getData/codeCountryDataForm"; // Importar los datos desde el JSON
+import codeCountryDataForm from "@/app/getData/codeCountryDataForm"; // Importar los datos desde el JSON
 import React, { useEffect, useRef, useState } from "react";
 import { BsArrowDown, BsGlobe } from "react-icons/bs";
 

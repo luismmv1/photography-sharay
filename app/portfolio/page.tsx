@@ -1,4 +1,4 @@
-import { DashBoardSide } from "@/components/portfolio/PortFolio"
+import { DashBoardSide } from "@/app/components/portfolio/PortFolio"
 
 const page = () => {
   return (
