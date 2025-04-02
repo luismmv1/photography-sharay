@@ -1,4 +1,4 @@
-import siteDataInfo from "@/components/getData/siteDataInfo";
+import siteDataInfo from "@/getData/siteDataInfo";
 import { motion } from "framer-motion";
 import { FaFacebook, FaInstagram, FaTiktok, FaWhatsapp } from 'react-icons/fa';
 

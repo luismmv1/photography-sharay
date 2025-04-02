@@ -1,5 +1,5 @@
-import { AnimatedTestimonials } from "@/components/ui/animated-testimonials";
-import servicesDataSlug from "../getData/servicesDataSlug";
+import { AnimatedTestimonials } from "@/components/services/animated-testimonials";
+import servicesDataSlug from "@/getData/servicesDataSlug";
 
 export function AnimatedService() {
   const services = servicesDataSlug.map(service => ({
@@ -7,7 +7,7 @@ export function AnimatedService() {
     name: service.tittle,
     designation: "", // Valor vacío para agregar manualmente más tarde
     src: service.imagen, // Usar la imagen principal del servicio
-    slug: "services/"+service.slug,
+    slug: "services/" + service.slug,
   }));
 
   return <AnimatedTestimonials testimonials={services} />;

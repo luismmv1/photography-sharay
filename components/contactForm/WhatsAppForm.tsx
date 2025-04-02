@@ -1,8 +1,8 @@
 "use client";
 
-import contactFormData from "@/components/contactForm/getData/contactFormData"; // Importar datos del sitio web
-import formvalidations from "@/components/contactForm/getData/formvalidations"; // Importar validaciones
-import { FormData, FormErrors } from "@/components/contactForm/getData/interfaces"; // Importar interfaces
+import contactFormData from "@/getData/contactDataForm"; // Importar datos del sitio web
+import { FormData, FormErrors } from "@/getData/interfacesDataForm"; // Importar interfaces
+import validationsDataForm from "@/getData/validationsDataForm"; // Importar validaciones
 import { motion } from "motion/react";
 import React, { useState } from "react";
 import { toast, Toaster } from "react-hot-toast";
@@ -54,7 +54,7 @@ const WhatsAppForm = () => {
 
   // Validar campo individualmente
   const validateField = (name: keyof FormErrors, value: string) => {
-    const rule = formvalidations[name];
+    const rule = validationsDataForm[name];
     if (!rule) return;
 
     let error = "";
@@ -84,7 +84,7 @@ const WhatsAppForm = () => {
 
     Object.keys(formData).forEach((field) => {
       const value = formData[field as keyof FormData];
-      const rule = formvalidations[field as keyof typeof formvalidations];
+      const rule = validationsDataForm[field as keyof typeof validationsDataForm];
       if (rule && rule.required && !value.trim()) {
         newErrors[field as keyof FormErrors] = rule.errorMessage;
         isValid = false;

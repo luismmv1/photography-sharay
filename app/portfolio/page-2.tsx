@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import React, { useEffect, useState } from 'react';
 import ImageModal from '../../components/imageModal/ImageModal';
-import { categories, getCategoryImages } from './getData/categories';
+import { categories, getCategoryImages } from '../../getData/categoriesPortFolioData';
 
 const page: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('Todo');

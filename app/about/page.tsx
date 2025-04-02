@@ -1,10 +1,10 @@
 "use client";
 
-import { about, aboutGallery, aboutGalleryInfo, aboutMe, experienceInfo, experiences, } from "@/components/getData/aboutData";
+import { about, aboutGallery, aboutGalleryInfo, aboutMe, experienceInfo, experiences, } from "@/getData/aboutData";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
-const About = () => {
+const page = () => {
   return (
     <div>
       {/* Sección Sobre Mí */}
@@ -111,4 +111,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default page;

@@ -1,9 +1,24 @@
+import {
+  ArrowPathIcon,
+  BuildingLibraryIcon,
+  CakeIcon,
+  CalendarDaysIcon,
+  GiftIcon,
+  GiftTopIcon,
+  HeartIcon,
+  SparklesIcon,
+  UserCircleIcon,
+  UserIcon,
+  VideoCameraIcon,
+  ViewfinderCircleIcon,
+} from '@heroicons/react/20/solid';
 const basePath = '/pages/services/';
 
 export const categories = [
   {
     title: 'Aniversarios',
     path: 'aniversarios',
+    icon: CalendarDaysIcon,
     images: [
       'aniversarios/aniversarios.jpg',
       'aniversarios/aniversarios1.png',
@@ -11,38 +26,38 @@ export const categories = [
       'aniversarios/aniversarios3.png',
       'aniversarios/aniversarios4.png',
       'aniversarios/aniversarios5.png',
-      // Agrega más rutas de imágenes aquí
     ],
   },
   {
     title: 'Audiovisuales',
     path: 'audiovisual',
+    icon: VideoCameraIcon,
     images: [
       'audiovisual/audiovisual.jpg',
-      // Agrega más rutas de imágenes aquí
     ],
   },
   {
     title: 'BabyShowers',
     path: 'babyshowers',
+    icon: GiftTopIcon,
     images: [
       'babyshowers/babyshowers.jpg',
       'babyshowers/babyshowers1.jpg',
       'babyshowers/babyshowers2.jpg',
-      // Agrega más rutas de imágenes aquí
     ],
   },
   {
     title: 'Bautizos',
     path: 'bautizos',
+    icon: BuildingLibraryIcon,
     images: [
       'bautizos/bautizos.jpg',
-      // Agrega más rutas de imágenes aquí
     ],
   },
   {
     title: 'Bodas',
     path: 'bodas',
+    icon: HeartIcon,
     images: [
       'bodas/boda.jpg',
       'bodas/bodas.jpg',
@@ -98,28 +113,28 @@ export const categories = [
       'bodas/bodas50.jpg',
       'bodas/bodas51.jpg',
       'bodas/bodas52.png',
-      // Agrega más rutas de imágenes aquí
     ],
   },
   {
     title: 'Cumpleaños',
     path: 'cumples',
+    icon: CakeIcon,
     images: [
       'cumples/cumples.jpg',
-      // Agrega más rutas de imágenes aquí
     ],
   },
   {
     title: 'Contenido Digital',
     path: 'digital',
+    icon: ViewfinderCircleIcon,
     images: [
       'digital/digital.jpg',
-      // Agrega más rutas de imágenes aquí
     ],
   },
   {
     title: 'Eventos Especiales',
     path: 'eventos',
+    icon: SparklesIcon,
     images: [
       'eventos/eventos.jpg',
       'eventos/eventos1.jpg',
@@ -134,13 +149,12 @@ export const categories = [
       'eventos/eventos10.jpg',
       'eventos/eventos11.jpg',
       'eventos/eventos12.jpg',
-
-      // Agrega más rutas de imágenes aquí
     ],
   },
   {
     title: 'Modelos',
     path: 'model',
+    icon: UserIcon,
     images: [
       'model/model.jpg',
       'model/model1.jpg',
@@ -151,33 +165,35 @@ export const categories = [
       'model/model6.jpg',
       'model/model7.jpg',
       'model/model8.jpg',
-      // Agrega más rutas de imágenes aquí
     ],
   },
   {
     title: 'Productos',
     path: 'producto',
+    icon: ArrowPathIcon,
     images: [
       'producto/producto.jpg',
-      // Agrega más rutas de imágenes aquí
     ],
   },
   {
     title: 'Quince Años',
     path: 'quinces',
+    icon: GiftIcon,
     images: [
-      'quinces/quinces.jpg',
-      'quinces/quinces1.jpg',
-      'quinces/quinces2.jpg',
-      // Agrega más rutas de imágenes aquí
+        'quinces/quinces.jpg',
+        'quinces/quinces1.png',
+        'quinces/quinces2.png',
+        'quinces/quinces3.png',
+        'quinces/quinces4.png',
+        'quinces/quinces5.png',
     ],
   },
   {
     title: 'Retratos',
     path: 'retratos',
+    icon: UserCircleIcon,
     images: [
       'retratos/retratos.jpg',
-      // Agrega más rutas de imágenes aquí
     ],
   },
 ];

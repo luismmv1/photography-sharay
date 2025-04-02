@@ -34,7 +34,7 @@ export default function ScrollToTopButton() {
   return (
     <button
       onClick={scrollToTop}
-      className={`fixed bottom-20 right-20 z-50 p-4 rounded-md bg-indigo-800 text-white shadow-lg hover:bg-indigo-700 transition-opacity duration-300 ${
+      className={`fixed bottom-20 right-20 z-50 p-4 rounded-md bg-indigo-600 hover:bg-indigo-500 text-white shadow-lg transition-opacity duration-300 ${
         isVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'
       }`}
       aria-label="Ir al inicio"

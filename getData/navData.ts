@@ -9,7 +9,7 @@ import {
 } from '@heroicons/react/20/solid';
   
   export const callsToAction = [
-    { name: 'Observa mi Portafolio', href: '/portafolio', icon: PlayCircleIcon },
+    { name: 'Observa mi Portafolio', href: '/portfolio', icon: PlayCircleIcon },
     { name: 'Contáctame', href: '/contact', icon: PhoneIcon },
   ];
   

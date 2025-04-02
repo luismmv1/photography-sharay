@@ -5,7 +5,7 @@ type ValidationRules = {
   errorMessage: string;
 };
 
-const formvalidations: Record<string, ValidationRules> = {
+const validationsDataForm: Record<string, ValidationRules> = {
   name: {
     required: true,
     minLength: 3,
@@ -33,4 +33,4 @@ const formvalidations: Record<string, ValidationRules> = {
   },
 };
 
-export default formvalidations;
+export default validationsDataForm;

@@ -1,4 +1,4 @@
-import { notFoundData } from "@/components/getData/notFoundData"
+import { notFoundData } from "@/getData/notFoundData"
 import Link from "next/link"
 import { BsArrow90DegLeft } from "react-icons/bs"
 

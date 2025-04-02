@@ -1,7 +1,7 @@
 'use client'
 
-import siteDataInfo from "@/components/getData/siteDataInfo";
 import SocialLinks from "@/components/socialLinks/SocialLinks";
+import siteDataInfo from "@/getData/siteDataInfo";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { usePathname } from "next/navigation";

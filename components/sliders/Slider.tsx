@@ -1,5 +1,5 @@
 "use client"
-import { slideInfo, sliderImages } from "@/components/sliders/getData/slideDate";
+import { slideInfo, sliderImages } from "@/getData/slideData";
 import { AnimatePresence, motion } from "framer-motion";
 import Link from 'next/link';
 import { useEffect, useState } from "react";

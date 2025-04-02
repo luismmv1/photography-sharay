@@ -1,5 +1,5 @@
-import siteDataInfo from "@/components/getData/siteDataInfo";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
+import siteDataInfo from "@/getData/siteDataInfo";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Footer from "../components/footer/Footer";

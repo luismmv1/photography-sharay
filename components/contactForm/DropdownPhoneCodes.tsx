@@ -1,6 +1,6 @@
 "use client";
 
-import codecountries from "@/components/contactForm/getData/codecountries"; // Importar los datos desde el JSON
+import codeCountryDataForm from "@/getData/codeCountryDataForm"; // Importar los datos desde el JSON
 import React, { useEffect, useRef, useState } from "react";
 import { BsArrowDown, BsGlobe } from "react-icons/bs";
 
@@ -50,7 +50,7 @@ const DropdownPhoneCodes: React.FC<DropdownPhoneCodesProps> = ({ onCountryChange
     setSearchQuery(""); // Limpiar el filtro
   };
 
-  const filteredCountries = codecountries.filter(
+  const filteredCountries = codeCountryDataForm.filter(
     (country) =>
       country.name.toLowerCase().includes(searchQuery.toLowerCase()) || // Filtro por nombre del país
       country.phoneCode.includes(searchQuery) // Filtro por código telefónico

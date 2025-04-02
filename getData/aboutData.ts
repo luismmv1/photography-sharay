@@ -37,7 +37,7 @@ export const aboutLandingCards = [
     {
         title: "Pasión por el Arte",
         description: "Expresando creatividad y emociones a través de la fotografía y el diseño.",
-    }
+    },
 ]
 
 export const aboutGalleryInfo = {

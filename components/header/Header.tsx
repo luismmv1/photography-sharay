@@ -1,6 +1,6 @@
 'use client'
 
-import siteDataInfo from "@/components/getData/siteDataInfo"
+import siteDataInfo from "@/getData/siteDataInfo"
 import {
     Dialog,
     DialogPanel,
@@ -21,7 +21,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useState } from 'react'
 
-import { callsToAction, navLinks, services } from './navBar/NavData'
+import { callsToAction, navLinks, services } from '../../getData/navData'
 
 const Header = () => {
 

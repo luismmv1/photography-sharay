@@ -1,4 +1,4 @@
-const codecountries =[
+const codeCountryDataForm =[
 {
   "name": "Afganistán",
   "code": "AF",
@@ -1453,4 +1453,4 @@ const codecountries =[
 }
 ]
 
-export default codecountries
+export default codeCountryDataForm

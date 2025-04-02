@@ -1,11 +1,11 @@
 'use client'
 
 import Contact from "@/components/contactForm/Contact";
-import siteDataInfo from "@/components/getData/siteDataInfo";
 import SocialLinks from "@/components/socialLinks/SocialLinks";
+import siteDataInfo from "@/getData/siteDataInfo";
 import { BsEnvelopeAtFill, BsPhoneFill } from "react-icons/bs";
 
-const Page = () => {
+const page = () => {
  
   return (
     <div>
@@ -92,4 +92,4 @@ const Page = () => {
   );
 };
 
-export default Page;
+export default page;
