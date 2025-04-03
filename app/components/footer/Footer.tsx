@@ -5,6 +5,7 @@ import siteDataInfo from "@/app/getData/siteDataInfo";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import Title from "../header/Title";
 
 const Footer = () => {
   const pathname = usePathname();
@@ -31,17 +32,12 @@ const Footer = () => {
           >
             <Link
               href="/">
-              <div className="flex">
-                <img
-                  src={siteDataInfo.logoPng}
-                  alt="Logo Sharay Henriquez mr-4"
-                  className="h-10 w-auto"
-                /* className="h-10 w-auto rounded-full bg-gray-700 mr-4" */
-                />
-                <span>{siteDataInfo.siteName}</span>
-              </div>
+              <Title
+                logoHeight={80}
+                logoWidth={80}
+                textSize="text-3xl"
+              />
             </Link>
-            
           </motion.h2>
           <p className="text-gray-400 text-sm text-justify">
             {siteDataInfo.siteSlogan}

@@ -1,28 +1,33 @@
 'use client'
-
-import siteDataInfo from "@/app/getData/siteDataInfo"
 import {
-  Dialog,
-  DialogPanel,
-  Disclosure,
-  DisclosureButton,
-  DisclosurePanel,
-  Popover,
-  PopoverButton,
-  PopoverGroup,
-  PopoverPanel,
-} from '@headlessui/react'
-import { ChevronDownIcon } from '@heroicons/react/20/solid'
+    Dialog,
+    DialogPanel,
+    Disclosure,
+    DisclosureButton,
+    DisclosurePanel,
+    Popover,
+    PopoverButton,
+    PopoverGroup,
+    PopoverPanel,
+} from '@headlessui/react';
+import { ChevronDownIcon } from '@heroicons/react/20/solid';
 import {
-  Bars3Icon,
-  XMarkIcon
-} from '@heroicons/react/24/outline'
-import Link from 'next/link'
-import { usePathname } from 'next/navigation'
-import { useState } from 'react'
+    Bars3Icon,
+    XMarkIcon
+} from '@heroicons/react/24/outline';
+import { Great_Vibes } from 'next/font/google';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { useState } from 'react';
 
-import { callsToAction, navLinks, services } from '../../getData/navData'
+import { callsToAction, navLinks, services } from '../../getData/navData';
+import Title from "./Title";
 
+const greatVibes = Great_Vibes({
+    subsets: ['latin'],
+    weight: '400',
+  });
+  
 const Header = () => {
 
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -33,15 +38,7 @@ const Header = () => {
             <nav aria-label="Global" className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
                 <div>
                     <Link href="/" className="-m-1.5 p-1.5">
-                        <div className="flex lg:flex-1 text-white">
-                            <img
-                                alt="logo"
-                                src={siteDataInfo.logoPng}
-                                className='h-30 w-auto'
-                                /* className="h-20 w-auto rounded-full bg-gray-700 mr-4" */
-                            />
-                            <h2 className='self-center font-bold text-gray-900 dark:text-white text-3xl'> {siteDataInfo.siteName}</h2>
-                        </div>
+                        <Title/>
                     </Link>
                 </div>
                 <div className="flex lg:hidden">
@@ -117,13 +114,11 @@ const Header = () => {
                 <DialogPanel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
                     <div className="flex items-center justify-between">
                         <Link href="/" className="-m-1.5 p-1.5 flex items-center">
-                            <img
-                                alt=""
-                                src='/logo/logo.png'
-                                className='h-8 w-auto mr-2'
-                                /* className="h-8 w-auto rounded-full bg-gray-700 mr-2" */
+                            <Title
+                                logoHeight={60}
+                                logoWidth={60}
+                                textSize="text-xl"
                             />
-                            <span className="">{siteDataInfo.siteName}</span>
                         </Link>
                         <button
                             type="button"
