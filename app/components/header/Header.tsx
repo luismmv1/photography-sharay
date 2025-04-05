@@ -15,7 +15,6 @@ import {
     Bars3Icon,
     XMarkIcon
 } from '@heroicons/react/24/outline';
-import { Great_Vibes } from 'next/font/google';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
@@ -23,11 +22,7 @@ import { useState } from 'react';
 import { callsToAction, navLinks, services } from '../../getData/navData';
 import Title from "./Title";
 
-const greatVibes = Great_Vibes({
-    subsets: ['latin'],
-    weight: '400',
-  });
-  
+
 const Header = () => {
 
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);

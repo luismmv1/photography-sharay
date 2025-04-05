@@ -2,6 +2,7 @@
 
 import { AnimatedService } from '@/app/components/services/AnimatedService';
 import { motion } from 'framer-motion';
+import { serviceData } from '../getData/servicesData';
 
 const page = () => {
   return (
@@ -23,7 +24,7 @@ const page = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
           >
-            Servicios
+            {serviceData.title}
           </motion.h1>
           {/* Descripcion */}
           <motion.p
@@ -32,7 +33,7 @@ const page = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
           >
-            Cada servicio está diseñado para capturar tus momentos más preciados y transformar tus ideas en arte.
+            {serviceData.description}
           </motion.p>
         </div>
       </section>

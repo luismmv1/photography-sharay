@@ -27,6 +27,7 @@ const Title: React.FC<TitleProps> = ({
         width={logoWidth} // Dinámico
         height={logoHeight} // Dinámico
         className="w-auto h-auto" // Mantiene proporciones
+        priority 
       />
       {/* Texto ajustable */}
       <h2

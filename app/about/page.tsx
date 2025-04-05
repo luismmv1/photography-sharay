@@ -32,6 +32,7 @@ const page = () => {
                   height={500}
                   className="rounded-full shadow-lg"
                   style={{ width: "auto", height: "auto" }}
+                  loading="lazy"
                 />
               </div>
               <div className="lg:w-1/2 lg:px-12 mt-8 lg:mt-0">
@@ -68,6 +69,7 @@ const page = () => {
                 alt={`Galería ${index + 1}`}
                 width={400}
                 height={400}
+                loading="lazy"
                 className="rounded-lg shadow-lg"
                 style={{ width: "auto", height: "auto" }}
               />

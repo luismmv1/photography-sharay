@@ -3,7 +3,6 @@ import { slideInfo, sliderImages } from "@/app/getData/slideData";
 import { AnimatePresence, motion } from "framer-motion";
 import Link from 'next/link';
 import { useEffect, useState } from "react";
-import { BsPhoneFill } from "react-icons/bs";
 
 
 const Slider = () => {
@@ -32,7 +31,6 @@ const Slider = () => {
                     backgroundImage: `url(${sliderImage})`,
                     backgroundPosition: "center center",
                     backgroundSize: "contain",
-                    /* backgroundSize: "cover or contain" esto ajusta la imagen completa o repetir */
                   }}
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
@@ -60,13 +58,13 @@ const Slider = () => {
             </span>
           </h2>
           <Link
-            href="/contact"
+            href={slideInfo.buttonLink}
             className="mt-6 inline-block px-10 py-3 bg-indigo-600 text-white font-bold rounded-lg hover:bg-indigo-500 transition"
           >
             <div className="flex items-center space-x-2">
-              <BsPhoneFill className="text-center text-2xl"/>
+              <slideInfo.buttonIcon className="text-center text-2xl"/>
               <span>
-                Contáctame
+                {slideInfo.buttonText}
               </span>
             </div>
           </Link>

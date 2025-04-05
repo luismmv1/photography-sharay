@@ -1,7 +1,5 @@
 import { categories, getCategoryImages } from "@/app/getData/categoriesPortFolioData";
 
-
-
 // Componente del Dashboard
 const Dashboard = ({
   selectedCategory,

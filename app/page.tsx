@@ -10,17 +10,12 @@ const page = () => {
   
   return (
     <main className="bg-white dark:bg-gray-900">
-      {/*Slider Section*/}
       <section id="slider" className="border shadow-2xl">
         <Slider />
       </section>
-
-      {/* Services Section */}
       <section id="services" className="py-16">
         <ServicesLanding/>
       </section>
-
-      {/* About Section */}
       <section
         id="about"
         className="relative py-16 bg-gray-100 dark:bg-gray-800"
@@ -33,14 +28,10 @@ const page = () => {
       >
         <AboutLanding />
       </section>
-
-      {/* Portfolio Section */}
       <section id="portfolio" className="py-16 bg-gray-100 dark:bg-gray-800">
         <PortFolioLanding/>
       </section>
-  
-      {/* Contact Section */}
-      <section id="contact" className="py-16 items-center">
+        <section id="contact" className="py-16 items-center">
         <div className="grid container mx-auto mb-8 items-center p-12 rounded-2xl relative shadow-md overflow-hidden m-12">
           <WhatsAppForm />
         </div>

@@ -1,8 +1,8 @@
 "use client";
 
 import { AnimatedCircularProgressBarDemo } from "@/app/components/progress/progressMagicUI";
+import { constructWhatsAppLink, serviceSlugError } from "@/app/getData/servicesData";
 import servicesDataSlug from "@/app/getData/servicesDataSlug";
-import { constructWhatsAppLink } from "@/lib/utils"; // Import the WhatsApp link utility
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
@@ -51,11 +51,25 @@ export default function ServicePage({ params }: PageProps) {
   }, [resolvedParams]);
 
   // Show the progress indicator until the loading is complete
-  if (loading || !service) {
+  
+
+  if (loading) {
     return (
       <div className="flex items-center justify-center h-screen bg-gray-100 dark:bg-gray-800">
-        {/* Progress Indicator */}
         <AnimatedCircularProgressBarDemo />
+      </div>
+    );
+  }
+  
+  if (!service) {
+    return (
+      <div className="flex items-center justify-center h-screen bg-gray-100 dark:bg-gray-800">
+        <Link
+          href={serviceSlugError.enlace}
+          className="text-2xl text-gray-700 dark:text-gray-300"
+        >
+          {serviceSlugError.error1}
+        </Link>
       </div>
     );
   }
@@ -92,17 +106,17 @@ export default function ServicePage({ params }: PageProps) {
         </div>
         {/* WhatsApp Contact Button */}
         <div className="text-center">
-          <a
-            href={constructWhatsAppLink(service?.tittle)}
+          <Link
+            href={service?.tittle ? constructWhatsAppLink(service?.tittle) : '#'}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-white border bg-green-700 border-gray-300 rounded-lg hover:bg-green-600 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800"
+            className="flex items-center justify-center px-5 py-3 font-medium text-center text-white border bg-green-700 rounded-lg hover:bg-green-600"
           >
             <div className="flex text-center space-x-2">
               <span>Contactar por WhatsApp</span>
               <FaWhatsapp className="text-center text-2xl" />
             </div>
-          </a>
+          </Link>
         </div>
       </section>
 
@@ -121,28 +135,41 @@ export default function ServicePage({ params }: PageProps) {
                 className="relative overflow-hidden rounded-lg transition-shadow duration-300 bg-white w-auto h-100"
                 whileHover={{ scale: 1.2 }}
               >
-                <img src={service.imagen} alt="" className="w-auto h-auto rounded-lg text-center" />
+                <Image
+                  src={service.imagen}
+                  alt={service.tittle}
+                  className="w-auto h-auto rounded-lg text-center"
+                  priority
+                  width={300}
+                  height={300}
+                />
               </motion.div>
             </div>
           </div>
           <div className="col-span-4 col-start-2 text-center items-center">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12 items-center">
-              {service.images.map((src, index) => (
-                <motion.div
-                  key={index}
-                  className="relative overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 bg-white dark:bg-gray-700 w-90 h-auto"
-                  whileHover={{ scale: 1.05 }}
-                >
-                  <Image
-                    src={src}
-                    alt={`${service.tittle} ${index + 1}`}
-                    className="w-full h-auto object-cover rounded-lg"
-                    width={300}
-                    height={300}
-                    priority={index === 0}
-                  />
-                </motion.div>
-              ))}
+              {service.images.length > 0 ? (
+                service.images.map((src, index) => (
+                  <motion.div
+                    key={index}
+                    className="relative overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 bg-white dark:bg-gray-700 w-90 h-auto"
+                    whileHover={{ scale: 1.05 }}
+                  >
+                    <Image
+                      src={src}
+                      alt={`${service.tittle} ${index + 1}`}
+                      className="w-full h-auto object-cover rounded-lg"
+                      width={300}
+                      height={300}
+                      priority={index === 0}
+                    />
+                  </motion.div>
+                ))
+              ) : (
+                <p className="text-center text-gray-500 dark:text-gray-400">
+                  {serviceSlugError.error}
+                </p>
+              )}
             </div>
           </div>
         </div>

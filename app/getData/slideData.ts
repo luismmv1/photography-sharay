@@ -1,8 +1,13 @@
+import { BsPhoneFill } from "react-icons/bs";
+
 export const slideInfo = {
 
-      sliderTitle: "Capturando Momentos Inolvidables para tí.", 
-      sliderDescription: "Explora mi portafolio y descubre mi pasión por la fotografía.",
-      };
+    sliderTitle: "Capturando Momentos Inolvidables para tí.",
+    sliderDescription: "Explora mi portafolio y descubre mi pasión por la fotografía.",
+    buttonLink: "/contact",
+    buttonText: "Contáctame",
+    buttonIcon: BsPhoneFill,    
+};
     
 export const sliderImages = [
     "/pages/home/sliders/slide.jpg",
