@@ -7,22 +7,22 @@ export const servicesLandingData = {
 export const servicesLandingImage = [
     {
         name: "Bodas",
-        enlace: "/bodas",
+        href: "/bodas",
         image: "/pages/home/services/bodas.jpg"
     },
     {
         name: "15 Años",
-        enlace: "/quinces",
+        href: "/quinces",
         image: "/pages/home/services/quinces.jpg"
     },
     {
         name: "Aniversarios",
-        enlace: "/aniversarios",
+        href: "/aniversarios",
         image: "/pages/home/services/aniversarios.jpg"
     },
     {
         name: "Eventos Especiales",
-        enlace: "/eventos",
+        href: "/eventos",
         image: "/pages/home/services/eventos.jpg"
     },
   ];

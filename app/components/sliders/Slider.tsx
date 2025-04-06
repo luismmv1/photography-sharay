@@ -58,7 +58,7 @@ const Slider = () => {
             </span>
           </h2>
           <Link
-            href={slideInfo.buttonLink}
+            href={slideInfo.href}
             className="mt-6 inline-block px-10 py-3 bg-indigo-600 text-white font-bold rounded-lg hover:bg-indigo-500 transition"
           >
             <div className="flex items-center space-x-2">

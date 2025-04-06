@@ -1,4 +1,3 @@
-
 export const about = {
     title: "Sobre Mi",
     description: "Mi pasión por el arte, la fotografía y la creación de contenido.",
@@ -59,7 +58,7 @@ export const experienceInfo = {
     description: "Conoce más sobre mi trayectoria profesional y las áreas en las que me destaco.",
 };
 
-export const experiences = [
+export const experienceData = [
     {
         title: "Fotógrafo Profesional",
         description: "Más de 10 años capturando momentos inolvidables, desde bodas hasta eventos corporativos.",

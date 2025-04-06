@@ -4,7 +4,7 @@ export const slideInfo = {
 
     sliderTitle: "Capturando Momentos Inolvidables para tí.",
     sliderDescription: "Explora mi portafolio y descubre mi pasión por la fotografía.",
-    buttonLink: "/contact",
+    href: "/contact",
     buttonText: "Contáctame",
     buttonIcon: BsPhoneFill,    
 };
@@ -23,5 +23,4 @@ export const sliderImages = [
     "/pages/home/sliders/slide10.jpg",
     "/pages/home/sliders/slide11.jpg",
     "/pages/home/sliders/slide12.jpg",
-
 ];

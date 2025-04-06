@@ -65,7 +65,7 @@ export default function ServicePage({ params }: PageProps) {
     return (
       <div className="flex items-center justify-center h-screen bg-gray-100 dark:bg-gray-800">
         <Link
-          href={serviceSlugError.enlace}
+          href={serviceSlugError.href}
           className="text-2xl text-gray-700 dark:text-gray-300"
         >
           {serviceSlugError.error1}

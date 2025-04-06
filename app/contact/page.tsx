@@ -1,7 +1,8 @@
 'use client'
 
-import Contact from "@/app/components/contactForm/Contact";
+import ContactForm from "@/app/components/contact/ContactForm";
 import SocialLinks from "@/app/components/socialLinks/SocialLinks";
+import { contactPageData } from "@/app/getData/contactDataForm";
 import siteDataInfo from "@/app/getData/siteDataInfo";
 import { BsEnvelopeAtFill, BsPhoneFill } from "react-icons/bs";
 
@@ -20,7 +21,7 @@ const page = () => {
         >
           <div className="h-full w-full bg-opacity-50 flex items-center justify-center">
             <h1 className="text-white text-4xl font-bold bg-gray-700/70 rounded-md p-4">
-              Contáctame
+              {contactPageData.title}
             </h1>
           </div>
         </div>
@@ -29,10 +30,10 @@ const page = () => {
           {/* Sección de información de contacto */}
           <div className="space-y-8">
             <h2 className="text-3xl font-bold text-gray-900 dark:text-white">
-              Información de Contacto
+            {contactPageData.contactTitle}
             </h2>
             <p className="text-gray-600 dark:text-gray-400">
-              Estoy aquí para ayudarte con tus consultas o proyectos. Puedes ponerte en contacto a través de los siguientes medios:
+              {contactPageData.contactDescription}
             </p>
             <ul className="space-y-4">
               <li className="text-lg text-gray-900 dark:text-white">
@@ -42,10 +43,10 @@ const page = () => {
                   </div>
                   <div>
                     <h4 className="text-lg font-bold text-gray-900 dark:text-white">
-                      Llámame
+                    {contactPageData.callMeTitle}
                     </h4>
                     <p className="text-gray-600 dark:text-gray-300">
-                      Estare encantada de atenderte.
+                      {contactPageData.callMeDescription}
                     </p>
                     <p className="text-indigo-600 dark:text-indigo-400">
                       {siteDataInfo.contactPhones}
@@ -60,10 +61,10 @@ const page = () => {
                   </div>
                   <div>
                     <h4 className="text-lg font-bold text-gray-900 dark:text-white">
-                      Escríbeme
+                    {contactPageData.writeMeTitle}
                     </h4>
                     <p className="text-gray-600 dark:text-gray-300">
-                      Puedes enviarme un correo con tus dudas o propuestas.
+                    {contactPageData.writeMeDescription}
                     </p>
                     <a
                       href={`mailto:${siteDataInfo.contactEmails}`}
@@ -76,15 +77,13 @@ const page = () => {
               </li>
             </ul>
 
-            {/* Iconos de redes sociales */}
             <div className="flex space-x-4">
               <SocialLinks />
             </div>
           </div>
 
-          {/* Sección del formulario */}
           <div>
-            <Contact />
+            <ContactForm />
           </div>
         </div>
       </section>

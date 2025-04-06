@@ -14,7 +14,19 @@ import {
 } from '@heroicons/react/20/solid';
 const basePath = '/pages/services/';
 
-export const categories = [
+// Define el tipo para los íconos (opcional si los íconos son componentes React)
+type IconType = React.ElementType;
+
+// Define el tipo para las categorías
+interface Category {
+  title: string;
+  path: string;
+  icon: IconType;
+  images: string[];
+}
+
+export const categories: Category[] = [
+
   {
     title: 'Aniversarios',
     path: 'aniversarios',
@@ -197,7 +209,15 @@ export const categories = [
     ],
   },
 ];
+// Función para obtener las imágenes de una categoría específica
+export const getCategoryImages = (path: string): string[] => {
+  const category = categories.find((category) => category.path === path);
 
-export const getCategoryImages = (path) => {
-  return categories.find(category => category.path === path).images.map(image => basePath + image);
+  // Verifica si la categoría existe para evitar errores
+  if (!category) {
+    throw new Error(`Category with path '${path}' not found.`);
+  }
+
+  // Agrega el basePath a cada imagen
+  return category.images.map((image) => `${basePath}${image}`);
 };

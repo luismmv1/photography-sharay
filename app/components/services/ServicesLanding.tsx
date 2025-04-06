@@ -32,7 +32,7 @@ const ServicesLanding = () => {
               whileHover={{ scale: 1.05 }}
             >
               <Link
-                href={`/services/${servicesLandingImage.enlace}`}
+                href={`/services/${servicesLandingImage.href}`}
               >
                 <Image
                   src={servicesLandingImage.image}

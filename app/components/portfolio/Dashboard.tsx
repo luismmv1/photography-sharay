@@ -1,4 +1,5 @@
-import { categories, getCategoryImages } from "@/app/getData/categoriesPortFolioData";
+import { categories, getCategoryImages } from "@/app/getData/portFolioData";
+import Image from "next/image";
 
 // Componente del Dashboard
 const Dashboard = ({
@@ -35,10 +36,13 @@ const Dashboard = ({
                   className="relative cursor-pointer"
                   onClick={() => onImageClick(category.images, index)} // Abrir modal al hacer clic
                 >
-                  <img
+                  <Image
                     src={src}
                     alt={`${category.title} ${index + 1}`}
                     className="w-full h-auto object-cover rounded-lg"
+                    width={300}
+                    height={300}
+                    loading="lazy"
                   />
                 </div>
               ))}

@@ -14,7 +14,7 @@ const PortFolioLanding = () => {
         transition={{ duration: 1 }}
       >
         {/* Título del portafolio */}
-        <Link href={portfolioLandingData.enlace}>
+        <Link href={portfolioLandingData.href}>
           <h2 className="text-3xl font-bold text-gray-900 dark:text-white">
             {portfolioLandingData.title}
           </h2>

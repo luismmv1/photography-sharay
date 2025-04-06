@@ -19,7 +19,7 @@ export const services = [
     { name: '15 Años', description: 'Captura la magia de tu transición más especial.', href: '/services/quinces', icon: GiftIcon },
     { name: 'Aniversarios', description: 'Celebra el amor, captura recuerdos eternos.', href: '/services/aniversarios', icon: CalendarDaysIcon },
     { name: 'Eventos Especiales', description: 'Tus eventos únicos, capturados con precisión.', href: '/services/eventos', icon: SparklesIcon },
-    /*  { name: 'BabyShowers', description: 'Tu dulce espera, retratada con amor.', href: '/services/babyshowers', icon: GiftTopIcon }, */
+    /* { name: 'BabyShowers', description: 'Tu dulce espera, retratada con amor.', href: '/services/babyshowers', icon: GiftTopIcon }, */
     /* { name: 'Bautizos', description: 'Inmortaliza el comienzo de una fe llena de amor.', href: '/services/bautizos', icon: BuildingLibraryIcon }, */
     /* { name: 'Cumpleaños', description: 'Memorias vibrantes de tu celebración especial.', href: '/services/cumples', icon: CakeIcon }, */
     /* { name: 'Productos', description: 'Resalta lo mejor de tu producto.', href: '/services/productos', icon: ArrowPathIcon }, */

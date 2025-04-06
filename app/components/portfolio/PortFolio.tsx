@@ -4,7 +4,7 @@ import ImageModal from "@/app/components/imageModal/ImageModal"; // Modal para i
 import Dashboard from "@/app/components/portfolio/Dashboard";
 import { Sidebar, SidebarBody, SidebarLink } from "@/app/components/portfolio/sidebar";
 import { AnimatedCircularProgressBarDemo } from "@/app/components/progress/progressMagicUI"; // Import progress component
-import { categories, getCategoryImages } from "@/app/getData/categoriesPortFolioData";
+import { categories, getCategoryImages } from "@/app/getData/portFolioData";
 import siteDataInfo from "@/app/getData/siteDataInfo";
 import { cn } from "@/lib/utils";
 import Image from "next/image";

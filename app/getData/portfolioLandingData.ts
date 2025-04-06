@@ -2,7 +2,7 @@ export const portfolioLandingData = {
 
     title: "Mi Portafolio", 
     description: "Un vistazo a mi trabajo creativo.",
-    enlace: "/portfolio",
+    href: "/portfolio",
     };
   
 export const portfolioLandingImage = [

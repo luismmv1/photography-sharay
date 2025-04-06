@@ -1,7 +1,7 @@
 type ValidationRules = {
   required: boolean;
-  minLength?: number; // Optional
-  regex?: RegExp; // Optional
+  minLength?: number;
+  regex?: RegExp;
   errorMessage: string;
 };
 

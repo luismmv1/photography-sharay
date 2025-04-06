@@ -7,7 +7,7 @@ import { motion } from "motion/react";
 import React, { useState } from "react";
 import { toast, Toaster } from "react-hot-toast";
 import { FaWhatsapp } from "react-icons/fa";
-import DropdownPhoneCodes from "./DropdownPhoneCodes"; // Nuevo componente para el país
+import DropdownPhoneCodes from "./DropdownPhoneCodes";
 
 const WhatsAppForm = () => {
   const [formData, setFormData] = useState<FormData>({

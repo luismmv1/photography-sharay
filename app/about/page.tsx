@@ -1,6 +1,6 @@
 "use client";
 
-import { about, aboutGallery, aboutGalleryInfo, aboutMe, experienceInfo, experiences, } from "@/app/getData/aboutData";
+import { about, aboutGallery, aboutGalleryInfo, aboutMe, experienceData, experienceInfo, } from "@/app/getData/aboutData";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
@@ -86,7 +86,7 @@ const page = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 container mx-auto">
-          {experiences.map((experience, index) => (
+          {experienceData.map((experience, index) => (
             <motion.div
               key={index}
               className="relative group perspective"

@@ -1,10 +1,10 @@
 "use client";
 
-import EmailForm from "@/app/components/contactForm/EmailForm";
-import WhatsAppForm from "@/app/components/contactForm/WhatsAppForm";
+import EmailForm from "@/app/components/contact/EmailForm";
+import WhatsAppForm from "@/app/components/contact/WhatsAppForm";
 import { useState } from "react";
 
-const Contact = () => {
+const ContactForm = () => {
   const [showWhatsAppForm, setShowWhatsAppForm] = useState(true);
 
   return (
@@ -36,4 +36,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default ContactForm;

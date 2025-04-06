@@ -1,7 +1,7 @@
 const siteDataInfo = {
     
   // Identificación general del sitio web
-  siteName: "Sharay Henriquez",
+    siteName: "Sharay Henriquez",
     siteDescription: "Portafolio Sharay Henriquez",
     siteSubDescription: "",
     siteSlogan: "Capturando momentos inolvidables y transformándolos en arte. Más de 10 años de experiencia en fotografía y contenido digital.",

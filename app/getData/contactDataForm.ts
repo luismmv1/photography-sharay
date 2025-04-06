@@ -1,4 +1,12 @@
-// contactFormData.ts
+export const contactPageData = {
+  title: "Contáctame",
+  contactTitle: "Información de Contacto",
+  contactDescription: "Estoy aquí para ayudarte con tus consultas o proyectos. Puedes ponerte en contacto a través de los siguientes medios:",
+  callMeTitle: "Llámame",
+  callMeDescription: "Estare encantada de atenderte.",
+  writeMeTitle: "Escríbeme",
+  writeMeDescription: "Puedes enviarme un correo con tus dudas o propuestas.",
+}
 
 const contactFormData = {
     ownerName: "Sharay Henriquez", // Nombre del dueño del sitio web
@@ -13,4 +21,4 @@ const contactFormData = {
 Estoy atento a tus prontos comentarios! Gracias.`,
   };
   
-  export default contactFormData;
+export default contactFormData;

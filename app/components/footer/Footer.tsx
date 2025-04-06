@@ -51,7 +51,7 @@ const Footer = () => {
             {[
               { name: "Inicio", href: "/" },
               { name: "Servicios", href: isHome ? "#services" : "/services" },
-              { name: "Portafolio", href: isHome ? "#portfolio" : "/portafolio" },
+              { name: "Portafolio", href: isHome ? "#portfolio" : "/portfolio" },
               { name: "Contacto", href: isHome ? "#contact" : "/contact" },
               { name: "Sobre Mí", href: isHome ? "#about" : "/about" },
             ].map((link, index) => (
