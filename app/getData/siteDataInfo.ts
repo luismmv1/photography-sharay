@@ -15,7 +15,7 @@ const siteDataInfo = {
     contactSupport: "Luis Mogollon",
     contactEmailsSupports: "luismmv2938@gmail.com",
     contactPhoneSupports: "+584144643661",
-    contactWebSiteSupports: "https://www.linkedin.com/in/lmmv/",
+    contactWebSiteSupports: "https://www.linkedin.com/in/lmmsv/",
     
   // Redes sociales
     socialMedia: {
